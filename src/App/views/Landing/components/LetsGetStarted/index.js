@@ -9,9 +9,7 @@ const LetsGetStarted = () => (
   <div className={css(styles.LetsGetStarted)}>
     <Btn
       copy={'Let\'s get started'}
-      style={{
-        padding: '50px'
-      }}
+      size='big'
     />
   </div>
 )
