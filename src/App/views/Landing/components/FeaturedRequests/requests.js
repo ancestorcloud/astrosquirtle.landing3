@@ -1,5 +1,4 @@
-
-const defaultAvatar = 'https://s3-us-west-2.amazonaws.com/astrocat-api/astrocat/avatars/aclogo-light-pink.svg'
+import { defaultAvatar } from 'config.definitions'
 
 const stevesJob = {
   title: 'Dobeln, Saxony, Germany Research',
