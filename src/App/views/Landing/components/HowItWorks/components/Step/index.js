@@ -28,7 +28,10 @@ Step.propTypes = {
   number: PropTypes.number,
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.shape({
+    src: PropTypes.string,
+    width: PropTypes.number
+  }),
   imageFirst: PropTypes.bool
 }
 

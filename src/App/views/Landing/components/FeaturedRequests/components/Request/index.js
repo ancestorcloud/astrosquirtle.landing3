@@ -12,14 +12,19 @@ const Request = ({
   reward
 }) => (
   <div className={css(styles.Request)}>
-    <div>
+    <div className={css(styles.avatarWrapper)}>
       <Avatar
         src={avatar}
-        size={80}
+        size={50}
       />
     </div>
     <div className={css(styles.textNode)}>
-      <div className={css(styles.title)}>{title}</div>
+      <div className={css(styles.topFlex)}>
+        <div className={css(styles.inlineAvatarWrapper)}>
+          <Avatar src={avatar} size={50} />
+        </div>
+        <div className={css(styles.title)}>{title}</div>
+      </div>
       <div className={css(styles.description)}>{description}</div>
       <div className={css(styles.reward)}>
         <span>Reward: </span>
@@ -42,13 +47,40 @@ Request.propTypes = {
 
 export default Request
 
+const compactWidth = 1000
+const compactLayout = `@media (max-width: ${compactWidth}px)`
+
 const styles = StyleSheet.create({
   Request: {
     display: 'flex'
   },
 
+  avatarWrapper: {
+    [compactLayout]: {
+      display: 'none'
+    }
+  },
+
   textNode: {
     marginLeft: '20px'
+  },
+
+  topFlex: {
+    display: 'flex',
+    alignItems: 'center',
+
+    [compactLayout]: {
+      marginBottom: '10px'
+    }
+  },
+
+  inlineAvatarWrapper: {
+    display: 'none',
+
+    [compactLayout]: {
+      display: 'block',
+      marginRight: '10px'
+    }
   },
 
   title: {

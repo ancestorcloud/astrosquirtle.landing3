@@ -25,12 +25,19 @@ const FeaturedHelpers = () => (
 
 export default FeaturedHelpers
 
+const compactWidth = 900
+const compactLayout = `@media (max-width: ${compactWidth}px)`
+
 const styles = StyleSheet.create({
   FeaturedHelpers: {
     width: '100%',
     padding: '60px',
     backgroundColor: colors.ebonyClay,
-    overflow: 'hidden'
+    overflow: 'hidden',
+
+    [compactLayout]: {
+      padding: '60px 10px'
+    }
   },
 
   header: {

@@ -3,9 +3,11 @@ import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
 
+import Avatar from 'atm.Avatar'
+
 const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true }) => {
   const imageNode = (
-    <div>
+    <div className={css(styles.avatarWrapper)}>
       <img
         src={avatar}
         className={css(styles.avatar)}
@@ -21,6 +23,7 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
           <img
             src={flagSrc}
             className={css(styles.flag)}
+            width={flagWidth}
           />
         </div>
       </div>
@@ -50,6 +53,11 @@ Profile.propTypes = {
 
 export default Profile
 
+const flagWidth = 36
+
+const compactWidth = 600
+const compactLayout = `@media (max-width: ${compactWidth}px)`
+
 const styles = StyleSheet.create({
   Profile: {
     backgroundColor: 'white',
@@ -57,11 +65,20 @@ const styles = StyleSheet.create({
     display: 'flex'
   },
 
+  inlineAvatarWrapper: {
+    display: 'none',
+
+    [compactLayout]: {
+      display: 'block',
+      marginRight: '10px'
+    }
+  },
+
   avatar: {
     height: '200px',
 
-    '@media (max-width: 500px)': {
-      height: '140px'
+    [compactLayout]: {
+      display: 'none'
     }
   },
 
@@ -75,7 +92,11 @@ const styles = StyleSheet.create({
 
   nameAndFlag: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    [compactLayout]: {
+      fontSize: '14px'
+    }
   },
 
   name: {
@@ -87,7 +108,7 @@ const styles = StyleSheet.create({
 
   flag: {
     margin: '0 16px',
-    width: '36px'
+    width: `${flagWidth}px`
   },
 
   description: {

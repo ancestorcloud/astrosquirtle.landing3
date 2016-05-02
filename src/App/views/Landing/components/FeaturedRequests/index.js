@@ -11,7 +11,6 @@ const FeaturedRequests = () => (
     <div className={css(styles.flex)}>
       {
         requests
-        // .slice(0, 3)
         .map((requestData, i) => (
           <div key={i} className={css(styles.requestWrapper)}>
             <Request
@@ -29,7 +28,11 @@ export default FeaturedRequests
 const styles = StyleSheet.create({
   wrapper: {
     width: '100%',
-    padding: '60px'
+    padding: '60px',
+
+    [`@media (max-width: 600px)`]: {
+      padding: '60px 10px'
+    }
   },
 
   header: {
