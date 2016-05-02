@@ -8,9 +8,22 @@
 
 @import "base.typography";
 
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/bebas-neue/BebasNeue Bold.otf');
+}
+
 html,
 body,
 #app {
   height: 100%;
-  font-family: monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display';
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }

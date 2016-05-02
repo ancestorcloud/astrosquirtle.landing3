@@ -15,7 +15,7 @@
 --base-font-family:      var(--mono-font-family);
 --base-font-weight:      var(--light);
 
---header-font-family:    var(--mono-font-family);
---header-font-weight:    var(--extra-bold);
+--header-font-family:    'Playfair Display';
+--header-font-weight:    bold;
 
 }

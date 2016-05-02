@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import App from 'App'
-import Stack from 'App/views/Stack'
+import Landing from 'App/views/Landing'
 
 const routes = (
   <Route path='/' component={App}>
-    <IndexRoute component={Stack} />
+    <IndexRoute component={Landing} />
   </Route>
 )
 

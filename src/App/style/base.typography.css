@@ -10,10 +10,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--base-font-family);
   text-rendering: optimizeLegibility;
+  color: #eee;
 }
 
 // Headers
 // ==========================================================================
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font-family);
+  font-family: monospace !important;
   font-weight: var(--header-font-weight);
+  color: #eee;
 }
