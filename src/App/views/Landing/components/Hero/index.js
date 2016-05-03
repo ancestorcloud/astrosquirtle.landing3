@@ -3,6 +3,8 @@ import { StyleSheet, css } from 'aphrodite'
 
 import Btn from 'atm.Btn'
 
+import { links } from 'config.definitions'
+
 const Hero = () => (
   <div className={css(styles.Hero)}>
     <div className={css(styles.images)}>
@@ -14,13 +16,15 @@ const Hero = () => (
       <div className={css(styles.textMajor)}>genealogy experts</div>
       <div className={css(styles.textMinor)}>& willing helpers from around the world</div>
       <div className={css(styles.buttonWrapper)}>
-        <Btn
-          copy='Find A Helper'
-          style={{
-            padding: '20px 50px',
-            fontSize: '20px'
-          }}
-        />
+        <a href={links.community}>
+          <Btn
+            copy='Find A Helper'
+            style={{
+              padding: '20px 50px',
+              fontSize: '20px'
+            }}
+          />
+        </a>
       </div>
     </div>
   </div>

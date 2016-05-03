@@ -5,12 +5,16 @@ import { colors } from 'settings.style'
 
 import Btn from 'atm.Btn'
 
+import { links } from 'config.definitions'
+
 const LetsGetStarted = () => (
   <div className={css(styles.LetsGetStarted)}>
-    <Btn
-      copy={'Let\'s get started'}
-      size='big'
-    />
+    <a href={links.registration}>
+      <Btn
+        copy={'Let\'s get started'}
+        size='big'
+      />
+    </a>
   </div>
 )
 

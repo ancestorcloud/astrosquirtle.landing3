@@ -7,25 +7,49 @@ import Logo from 'atm.Logo'
 import Btn from 'atm.Btn'
 import { Link } from 'react-router'
 
-const links = [
+import { links } from 'config.definitions'
+
+const linksData = [
   {
     copy: 'FAQ',
-    link: '/'
+    link: links.faq
   },
   {
     copy: 'Blog',
-    link: '/'
+    href: links.blog
   },
   {
     copy: 'Login',
-    link: '/'
+    href: links.login
   },
   {
     copy: 'Get Started',
-    link: '/',
+    href: links.registration,
     isButton: true
   }
 ]
+
+const linkContent = (isButton, content) =>
+  isButton
+  ? (
+    <Btn
+      copy={content}
+    />
+  )
+  : content
+
+const mapLinkDataToLink = ({ copy, link, href, isButton }, i) =>
+  link
+  ? (
+    <Link key={i} className={css(styles.link)} to={link}>{
+      linkContent(isButton, copy)
+    }</Link>
+  )
+  : (
+    <a key={i} className={css(styles.link)} href={href}>
+      {linkContent(isButton, copy)}
+    </a>
+  )
 
 const Nav = () => (
   <div className={css(styles.Nav)}>
@@ -35,17 +59,7 @@ const Nav = () => (
     <img src='/assets/images/ac_cloud.png' className={css(styles['logo-small'])} />
     <ul className={css(styles.links)}>
       {
-        links.map(({ copy, link, isButton }, i) => (
-          <Link key={i} className={css(styles.link)} to={link}>{
-            isButton
-            ? (
-              <Btn
-                copy={copy}
-              />
-            )
-            : copy
-          }</Link>
-        ))
+        linksData.map(mapLinkDataToLink)
       }
     </ul>
   </div>
