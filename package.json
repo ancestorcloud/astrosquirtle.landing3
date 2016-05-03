@@ -5,9 +5,11 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "prepacked-dev-server",
-    "stage": "NODE_ENV=staging prepacked-build-script",
-    "deploy": "NODE_ENV=production prepacked-build-script",
-    "test": "NODE_ENV=test ava --require babel-register"
+    "build": "npm run build:html",
+    "stage": "npm run build && NODE_ENV=staging prepacked-build-script",
+    "deploy": "npm run build && NODE_ENV=production prepacked-build-script",
+    "test": "NODE_ENV=test ava --require babel-register",
+    "build:html": "webpack --config ./html/webpack.html.js"
   },
   "author": "Mikey Murphy <mikeyamadeo@gmail.com> (https://twitter.com/TranscendMikey)",
   "license": "ISC",
