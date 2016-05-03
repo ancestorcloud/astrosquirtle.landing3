@@ -8,8 +8,8 @@ import faqData from './faqData'
 const FAQ = () => (
   <div className={css(styles.wrapper)}>
     <div className={css(styles.box)}>
-      {faqData.map(({ title, content }) => (
-        <div className={css(styles.questionAndAnswer)}>
+      {faqData.map(({ title, content }, i) => (
+        <div className={css(styles.questionAndAnswer)} key={i}>
           <div className={css(styles.question)}>{title}</div>
           <div className={css(styles.answer)}>{content}</div>
         </div>
