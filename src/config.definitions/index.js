@@ -20,7 +20,7 @@ export const links = {
   blog: 'http://ancestorcloud.com/blog',
 
   // landing
-  faq: '/#/faq',
+  faq: '/faq',
 
   // app
   community: `${appRoot}community`,

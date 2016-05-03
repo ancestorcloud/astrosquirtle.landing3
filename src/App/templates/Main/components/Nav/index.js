@@ -53,10 +53,12 @@ const mapLinkDataToLink = ({ copy, link, href, isButton }, i) =>
 
 const Nav = () => (
   <div className={css(styles.Nav)}>
-    <div className={css(styles['logo-big'])}>
-      <Logo />
-    </div>
-    <img src='/assets/images/ac_cloud.png' className={css(styles['logo-small'])} />
+    <Link to='/'>
+      <div className={css(styles['logo-big'])}>
+        <Logo />
+      </div>
+      <img src='/assets/images/ac_cloud.png' className={css(styles['logo-small'])} />
+    </Link>
     <ul className={css(styles.links)}>
       {
         linksData.map(mapLinkDataToLink)
