@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
-import Nav from './components/Nav'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import FeaturedHelpers from './components/FeaturedHelpers'
@@ -15,7 +14,6 @@ import FooterWithLinks from './components/FooterWithLinks'
 
 const Landing = () => (
   <div className={css(styles.flex)}>
-    <Nav />
     <Hero />
     <HowItWorks />
     <FeaturedHelpers />

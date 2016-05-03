@@ -57,7 +57,12 @@ const styles = StyleSheet.create({
   profileWrapper: {
     zIndex: '1',
     width: '100%',
-    boxShadow: '0 0 40px rgba(0, 0, 0, 0.6)'
+    height: '180px',
+    background: 'white',
+    boxShadow: '0 0 40px rgba(0, 0, 0, 0.6)',
+
+    display: 'flex',
+    alignItems: 'center'
   },
 
   connectionImg: {

@@ -41,6 +41,7 @@ const widthAtWhichToSwitchToVerticalLayout = 1100
 const verticalLayout = `@media (max-width: ${widthAtWhichToSwitchToVerticalLayout}px)`
 
 const stepStyles = {
+  position: 'relative',
   width: '100%',
   padding: '80px',
 
@@ -58,7 +59,7 @@ const stepStyles = {
 }
 
 const numberStyle = {
-  zIndex: '-1',
+  zIndex: '1',
   position: 'absolute',
   top: '-50px',
   fontFamily: 'Bebas Neue',

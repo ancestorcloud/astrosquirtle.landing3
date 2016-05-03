@@ -4,25 +4,24 @@ import { StyleSheet, css } from 'aphrodite'
 import Logo from 'atm.Logo'
 import LinkGroup from './components/LinkGroup'
 
+import { links } from 'config.definitions'
+
 const linkGroups = [
   {
     title: 'Social',
     links: [
       {
         copy: 'Facebook',
-        href: 'https://wikipedia.org'
+        href: links.facebook
       }, {
         copy: 'Twitter',
-        href: 'https://wikipedia.org'
+        href: links.twitter
       }, {
         copy: 'Instagram',
-        href: 'https://wikipedia.org'
+        href: links.instagram
       }, {
         copy: 'Google+',
-        href: 'https://wikipedia.org'
-      }, {
-        copy: 'Contact Us',
-        href: 'https://wikipedia.org'
+        href: links.googlePlus
       }
     ]
   },
@@ -31,19 +30,10 @@ const linkGroups = [
     links: [
       {
         copy: 'Blog',
-        href: 'https://wikipedia.org'
+        href: links.blog
       }, {
         copy: 'FAQ',
-        href: 'https://wikipedia.org'
-      }, {
-        copy: 'Find Helpers',
-        href: 'https://wikipedia.org'
-      }, {
-        copy: 'Apply to Help',
-        href: 'https://wikipedia.org'
-      }, {
-        copy: 'About',
-        href: 'https://wikipedia.org'
+        href: links.faq
       }
     ]
   },
@@ -52,19 +42,16 @@ const linkGroups = [
     links: [
       {
         copy: 'Helpers',
-        href: 'https://wikipedia.org'
+        href: links.community
       }, {
         copy: 'Requests',
-        href: 'https://wikipedia.org'
-      }, {
-        copy: 'Search',
-        href: 'https://wikipedia.org'
+        href: links.helpOthers
       }, {
         copy: 'Register',
-        href: 'https://wikipedia.org'
+        href: links.registration
       }, {
         copy: 'Login',
-        href: 'https://wikipedia.org'
+        href: links.login
       }
     ]
   }

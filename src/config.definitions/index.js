@@ -6,3 +6,25 @@ export const flags = {
   denmark: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/2000px-Flag_of_Denmark.svg.png',
   poland: 'https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg'
 }
+
+const appRoot = 'https://app.ancestorcloud.com/#/'
+
+export const links = {
+  // social
+  facebook: 'https://www.facebook.com/AncestorCloud',
+  twitter: 'https://twitter.com/ancestorcloud',
+  instagram: 'https://www.instagram.com/ancestorcloud/',
+  googlePlus: 'https://plus.google.com/101239994939407143407',
+
+  // blog
+  blog: 'http://ancestorcloud.com/blog',
+
+  // landing
+  faq: '/#/faq',
+
+  // app
+  community: `${appRoot}community`,
+  helpOthers: `${appRoot}helpOthers`,
+  registration: `${appRoot}registration`,
+  login: `${appRoot}login`
+}

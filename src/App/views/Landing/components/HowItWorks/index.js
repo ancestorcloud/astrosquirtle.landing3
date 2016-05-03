@@ -71,6 +71,7 @@ const HowItWorks = () => (
 const styles = StyleSheet.create({
   HowItWorks: {
     width: '100%',
+    background: '#fff',
 
     display: 'flex',
     flexDirection: 'column',
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
    */
 
   stepWrapper: {
-    zIndex: '-2', /* 1 */
+    zIndex: '1', /* 1 */
     width: '100%',
 
     display: 'flex',
