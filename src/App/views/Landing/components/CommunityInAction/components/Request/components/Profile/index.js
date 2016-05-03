@@ -17,17 +17,24 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
 
   const textNode = (
     <div className={css(styles.textNode)}>
-      <div className={css(styles.nameAndFlag)}>
-        <div className={css(styles.name)}>{name}</div>
+      <div className={css(styles.personWrapper)}>
+        <div className={css(styles.inlineAvatarWrapper)}>
+          <Avatar src={avatar} size={50} />
+        </div>
         <div>
-          <img
-            src={flagSrc}
-            className={css(styles.flag)}
-            width={flagWidth}
-          />
+          <div className={css(styles.nameAndFlag)}>
+            <div className={css(styles.name)}>{name}</div>
+            <div>
+              <img
+                src={flagSrc}
+                className={css(styles.flag)}
+                width={flagWidth}
+              />
+            </div>
+          </div>
+          <div className={css(styles.description)}>{description}</div>
         </div>
       </div>
-      <div className={css(styles.description)}>{description}</div>
       <div className={css(styles.about)}>&quot;{about}&quot;</div>
     </div>
   )
@@ -53,28 +60,32 @@ Profile.propTypes = {
 
 export default Profile
 
-const flagWidth = 36
+const flagWidth = 24
 
 const compactWidth = 600
 const compactLayout = `@media (max-width: ${compactWidth}px)`
 
 const styles = StyleSheet.create({
   Profile: {
-    backgroundColor: 'white',
-
     display: 'flex'
   },
 
+  personWrapper: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+
   inlineAvatarWrapper: {
-    display: 'none',
+    // display: 'none',
+    marginRight: '10px',
 
     [compactLayout]: {
-      display: 'block',
-      marginRight: '10px'
+      display: 'block'
     }
   },
 
   avatar: {
+    display: 'none',
     height: '200px',
 
     [compactLayout]: {
@@ -100,6 +111,7 @@ const styles = StyleSheet.create({
   },
 
   name: {
+    marginBottom: '-4px', // accounts for extra space at bottom of font
     fontFamily: 'Bebas Neue',
     letterSpacing: '1px',
     fontSize: '1.5em',
