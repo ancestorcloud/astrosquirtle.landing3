@@ -3,7 +3,7 @@ var appPath = path.resolve(__dirname, 'src')
 var stylePath = path.resolve(__dirname, 'src', 'App', 'style')
 var buildPath = path.resolve(__dirname, 'public')
 var getConfig = require('prepacked')
-var html = require('./html.js')
+var html = require('./html/html.bundle.js')
 var isDev = process.env.NODE_ENV !== 'production'
 
 var config = getConfig({
