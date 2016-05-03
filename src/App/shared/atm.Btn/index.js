@@ -3,16 +3,15 @@ import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
 
-const Btn = ({ copy, style }) => (
+const Btn = ({ copy, size = 'normal' }) => (
   <button
-    className={css(styles.button)}
-    style={style}
+    className={css(styles.button, styles[`button-${size}`])}
   >{copy}</button>
 )
 
 Btn.propTypes = {
   copy: PropTypes.string,
-  style: PropTypes.object
+  size: PropTypes.oneOf(['normal', 'big'])
 }
 
 export default Btn
@@ -27,5 +26,10 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     letterSpacing: '2px',
     color: 'white'
+  },
+
+  'button-big': {
+    padding: '20px 30px',
+    fontSize: '1.3em'
   }
 })
