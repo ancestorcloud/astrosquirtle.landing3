@@ -1,13 +1,14 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
-import { colors } from 'settings.style'
-
 import faqData from './faqData'
+
+import { colors } from 'settings.style'
 
 const FAQ = () => (
   <div className={css(styles.wrapper)}>
     <div className={css(styles.box)}>
+      <h1 className={css(styles.header)}>Frequently Asked Questions</h1>
       {faqData.map(({ title, content }, i) => (
         <div className={css(styles.questionAndAnswer)} key={i}>
           <div className={css(styles.question)}>{title}</div>
@@ -32,16 +33,24 @@ const styles = StyleSheet.create({
     padding: '50px'
   },
 
+  header: {
+    textAlign: 'center',
+    fontFamily: 'Bebas Neue',
+    color: colors.radicalRed
+  },
+
   questionAndAnswer: {
-    ':not(:last-child)': {
-      marginBottom: '40px'
-    }
+    // ':not(:last-child)': {
+    //   marginBottom: '40px'
+    // }
+    marginTop: '40px'
   },
 
   question: {
     marginBottom: '10px',
     fontWeight: 'bold',
-    fontSize: '1.2em'
+    fontSize: '1.3em',
+    color: colors.ebonyClay
   },
 
   answer: {
