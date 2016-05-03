@@ -22,7 +22,7 @@ export default LetsGetStarted
 
 const styles = StyleSheet.create({
   LetsGetStarted: {
-    background: colors.base,
+    background: 'colors.base',
     width: '100%',
     height: '200px',
 

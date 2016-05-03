@@ -52,6 +52,7 @@ export default AsSeenIn
 const styles = StyleSheet.create({
   flex: {
     width: '100%',
+    background: '#fff',
     padding: '20px 0',
     overflow: 'hidden',
 
