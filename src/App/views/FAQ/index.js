@@ -1,25 +1,62 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
+import Tabs from './components/Tabs'
+
 import faqData from './faqData'
 
 import { colors } from 'settings.style'
 
-const FAQ = () => (
-  <div className={css(styles.wrapper)}>
-    <div className={css(styles.box)}>
-      <h1 className={css(styles.header)}>Frequently Asked Questions</h1>
-      {faqData.map(({ title, content }, i) => (
-        <div className={css(styles.questionAndAnswer)} key={i}>
-          <div className={css(styles.question)}>{title}</div>
-          <div className={css(styles.answer)}>{content}</div>
-        </div>
-      ))}
-    </div>
+const mapFaqDataToNode = ({ title, content }, i) => (
+  <div className={css(styles.questionAndAnswer)} key={i}>
+    <div className={css(styles.question)}>{title}</div>
+    <div className={css(styles.answer)}>{content}</div>
   </div>
 )
 
-export default FAQ
+/**
+ * 1. get active tab
+ */
+const FaqUI = ({ activeTab, onTabClick }) => {
+  const activeFaqData = faqData
+    .filter(({name}) => name === activeTab)[0] /* 1 */
+
+  return (
+    <div className={css(styles.wrapper)}>
+      <div className={css(styles.box)}>
+        <h1 className={css(styles.header)}>Frequently Asked Questions</h1>
+        <Tabs
+          tabNames={faqData.map(({name}) => name)}
+          activeTab={activeTab}
+          onTabClick={onTabClick}
+        />
+        <div>
+          <div>{activeFaqData.data.map(mapFaqDataToNode)}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const Faq = React.createClass({
+  getInitialState () {
+    return {
+      activeTab: faqData[0].name
+    }
+  },
+
+  render () {
+    return (
+      <FaqUI
+        {...this.props}
+        activeTab={this.state.activeTab}
+        onTabClick={(name) => this.setState({ activeTab: name })}
+      />
+    )
+  }
+})
+
+export default Faq
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -59,6 +96,6 @@ const styles = StyleSheet.create({
   },
 
   answer: {
-    lineHeight: '1.4em'
+    lineHeight: '1.7em'
   }
 })
