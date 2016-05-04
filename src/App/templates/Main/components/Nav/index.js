@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     padding: 0,
     textTransform: 'uppercase',
     textDecoration: 'none',
-    color: colors.cadetBlue,
+    color: colors.aluminium,
 
     ':not(:last-child)': {
       margin: 0,
