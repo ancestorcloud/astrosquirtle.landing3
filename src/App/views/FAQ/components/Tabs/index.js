@@ -6,10 +6,11 @@ import { colors } from 'settings.style'
 const Tabs = ({ tabNames, activeTab, onTabClick }) => (
   <div className={css(styles.wrapper)}>
     {
-      tabNames.map((name) => (
+      tabNames.map((name, i) => (
         <div
           className={css(name === activeTab ? styles['tab-active'] : styles.tab)}
           onClick={() => onTabClick(name)}
+          key={i}
         >{name}</div>
       ))
     }
