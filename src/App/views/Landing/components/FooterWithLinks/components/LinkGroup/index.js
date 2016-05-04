@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
   link: {
     textDecoration: 'none',
-    color: colors.ebonyClay,
+    color: colors.aluminium,
 
     ':hover': {
       textDecoration: 'underline'
