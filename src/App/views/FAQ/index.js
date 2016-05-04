@@ -96,6 +96,6 @@ const styles = StyleSheet.create({
   },
 
   answer: {
-    lineHeight: '1.4em'
+    lineHeight: '1.7em'
   }
 })
