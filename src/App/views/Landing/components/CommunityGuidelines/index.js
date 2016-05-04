@@ -150,12 +150,16 @@ const styles = StyleSheet.create({
 
   tabs: {
     listStyleType: 'none',
+    margin: 0,
+    padding: 0,
     userSelect: 'none',
 
     display: 'flex'
   },
 
   tab: {
+    margin: 0,
+    padding: 0,
     background: colors.base,
     width: '100%',
     padding: '20px',
