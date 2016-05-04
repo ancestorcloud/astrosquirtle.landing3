@@ -9,7 +9,7 @@ import { links } from 'config.definitions'
 
 const LetsGetStarted = () => (
   <div className={css(styles.LetsGetStarted)}>
-    <a href={links.registration}>
+    <a href={links.registration} onClick={ctaOnClick}>
       <Btn
         copy={'Let\'s get started'}
         size='big'
@@ -19,6 +19,24 @@ const LetsGetStarted = () => (
 )
 
 export default LetsGetStarted
+
+function ctaOnClick () {
+
+  if (window.ga) {
+    window.ga('send', 'event', {
+      eventCategory: 'Landing',
+      eventAction: 'Footer Get Started',
+      eventLabel: 'Clicked'
+    })
+  }
+
+  if (window.mixpanel) {
+    window.mixpanel.track(
+      'Landed',
+      {source: 'footer'}
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   LetsGetStarted: {

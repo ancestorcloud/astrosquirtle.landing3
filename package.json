@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "prepacked-dev-server",
+    "start": "npm run build && prepacked-dev-server",
     "build": "npm run build:html",
     "stage": "npm run build && NODE_ENV=staging prepacked-build-script",
     "deploy": "npm run build && NODE_ENV=production prepacked-build-script",

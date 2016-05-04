@@ -16,7 +16,7 @@ const Hero = () => (
       <div className={css(styles.textMajor)}>genealogy experts</div>
       <div className={css(styles.textMinor)}>& willing helpers from around the world</div>
       <div className={css(styles.buttonWrapper)}>
-        <a href={links.community}>
+        <a href={links.community} onClick={ctaOnClick}>
           <Btn
             copy='Find A Helper'
             style={{
@@ -29,6 +29,25 @@ const Hero = () => (
     </div>
   </div>
 )
+
+function ctaOnClick () {
+
+  if (window.ga) {
+    window.ga('send', 'event', {
+      eventCategory: 'Landing',
+      eventAction: 'Find A Helper',
+      eventLabel: 'Clicked'
+    })
+  }
+
+  if (window.mixpanel) {
+    window.mixpanel.track(
+      'Landed',
+      {source: 'main'}
+    )
+  }
+
+}
 
 const stretchStyle = {
   position: 'absolute',

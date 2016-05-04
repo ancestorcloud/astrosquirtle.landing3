@@ -25,7 +25,8 @@ const linksData = [
   {
     copy: 'Get Started',
     href: links.registration,
-    isButton: true
+    isButton: true,
+    onClick: ctaOnClick
   }
 ]
 
@@ -38,15 +39,15 @@ const linkContent = (isButton, content) =>
   )
   : content
 
-const mapLinkDataToLink = ({ copy, link, href, isButton }, i) =>
+const mapLinkDataToLink = ({ copy, link, href, isButton, onClick }, i) =>
   link
   ? (
-    <Link key={i} className={css(styles.link)} to={link}>{
+    <Link key={i} className={css(styles.link)} to={link} onClick={onClick}>{
       linkContent(isButton, copy)
     }</Link>
   )
   : (
-    <a key={i} className={css(styles.link)} href={href}>
+    <a key={i} className={css(styles.link)} href={href} onClick={onClick}>
       {linkContent(isButton, copy)}
     </a>
   )
@@ -68,6 +69,24 @@ const Nav = () => (
 )
 
 export default Nav
+
+function ctaOnClick () {
+
+  if (window.ga) {
+    window.ga('send', 'event', {
+      eventCategory: 'Landing',
+      eventAction: 'Nav Get Started',
+      eventLabel: 'Clicked'
+    })
+  }
+  
+  if (window.mixpanel) {
+    window.mixpanel.track(
+      'Landed',
+      {source: 'nav'}
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   Nav: {
