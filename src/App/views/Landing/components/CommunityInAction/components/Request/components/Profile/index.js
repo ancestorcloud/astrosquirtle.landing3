@@ -22,13 +22,15 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
   const textNode = (
     <div className={css(styles.textNode)}>
       <div className={css(styles.personWrapper)}>
-        <div className={css(styles.inlineAvatarWrapper)}>
-          {
-            avatar
-            ? <Avatar src={avatar} size={50} />
-            : <Avatar initials={nameToInitials(name)} size={50} />
-          }
-        </div>
+        {
+          avatar
+          ? (
+            <div className={css(styles.inlineAvatarWrapper)}>
+              <Avatar src={avatar} size={50} />
+            </div>
+          )
+          : null
+        }
         <div>
           <div className={css(styles.nameAndFlag)}>
             <div className={css(styles.name)}>{name}</div>
