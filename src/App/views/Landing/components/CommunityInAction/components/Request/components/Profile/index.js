@@ -60,7 +60,7 @@ Profile.propTypes = {
 
 export default Profile
 
-const flagWidth = 24
+const flagWidth = 32
 
 const compactWidth = 600
 const compactLayout = `@media (max-width: ${compactWidth}px)`
@@ -120,7 +120,8 @@ const styles = StyleSheet.create({
 
   flag: {
     margin: '0 16px',
-    width: `${flagWidth}px`
+    width: `${flagWidth}px`,
+    boxShadow: '0 0 1px 1px rgba(0, 0, 0, 0.15)'
   },
 
   description: {

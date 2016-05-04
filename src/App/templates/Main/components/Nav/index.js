@@ -12,7 +12,7 @@ import { links } from 'config.definitions'
 const linksData = [
   {
     copy: 'FAQ',
-    link: links.faq
+    link: '/faq'
   },
   {
     copy: 'Blog',
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     padding: 0,
     textTransform: 'uppercase',
     textDecoration: 'none',
-    color: colors.cadetBlue,
+    color: colors.aluminium,
 
     ':not(:last-child)': {
       margin: 0,
