@@ -12,7 +12,7 @@ import { links } from 'config.definitions'
 const linksData = [
   {
     copy: 'FAQ',
-    link: links.faq
+    link: '/faq'
   },
   {
     copy: 'Blog',
