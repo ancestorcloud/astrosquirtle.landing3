@@ -1,4 +1,13 @@
 import React from 'react'
+import { StyleSheet, css } from 'aphrodite'
+
+const listSpacingStyle = { marginLeft: '15px' }
+
+const styles = StyleSheet.create({
+  ul: listSpacingStyle,
+  ol: listSpacingStyle,
+  li: listSpacingStyle
+})
 
 export default [
   {
@@ -46,13 +55,13 @@ export default [
         content: (
           <div>
             <p>There are many different types of acceptable requests. Here are just a few:</p>
-            <ul>
-              <li><strong>Archive Lookup</strong> – You can post a request for someone to visit an archive that you think contains information about an ancestral family.</li>
-              <li><strong>Record Pickup</strong> – You can ask for someone to pick up a record for you at a local repository.</li>
-              <li><strong>Research Question</strong> – You can ask for help finding a particular piece of information about an ancestral family, that you are unsure how to find.</li>
-              <li><strong>Translation</strong> – You can ask for help translating and transcribing historical records. There are several helpers throughout the world that are willing to help you translate old documents from other languages.</li>
-              <li><strong>Local Photograph</strong> – You can post a request for a photograph of a headstone, street where your ancestors lived, etc.</li>
-              <li><strong>Custom Research</strong> – You can post a request for a unique or more involved research project. This is similar to posting a “Research Question” request, but may involve slightly more extended research.</li>
+            <ul className={css(styles.ul)}>
+              <li className={css(styles.li)}><strong>Archive Lookup</strong> – You can post a request for someone to visit an archive that you think contains information about an ancestral family.</li>
+              <li className={css(styles.li)}><strong>Record Pickup</strong> – You can ask for someone to pick up a record for you at a local repository.</li>
+              <li className={css(styles.li)}><strong>Research Question</strong> – You can ask for help finding a particular piece of information about an ancestral family, that you are unsure how to find.</li>
+              <li className={css(styles.li)}><strong>Translation</strong> – You can ask for help translating and transcribing historical records. There are several helpers throughout the world that are willing to help you translate old documents from other languages.</li>
+              <li className={css(styles.li)}><strong>Local Photograph</strong> – You can post a request for a photograph of a headstone, street where your ancestors lived, etc.</li>
+              <li className={css(styles.li)}><strong>Custom Research</strong> – You can post a request for a unique or more involved research project. This is similar to posting a “Research Question” request, but may involve slightly more extended research.</li>
             </ul>
             <br />
           </div>
@@ -77,15 +86,13 @@ export default [
       {
         title: 'How does getting help work? What is the process?',
         content: (
-          <ol>
-            <br />
-            <li>You post a request.</li>
-            <li>AncestorCloud helpers from around the world can view your request. Helpers may comment or send you a message with initial research or questions.</li>
-            <li>If a helper feels they can help with your request, they will submit a proposal that includes what they will do, and how much reward they would ask for.</li>
-            <li>You have a chance to approve or ask questions of the helper about their proposal and experience by messaging them on their profile.</li>
-            <li>Once you approve, we will send you an invoice for the full reward price upfront. We will keep payment in our secure holdings until the research is completed.</li>
-            <li>Once we have confirmed that the research is complete, we will release payment to the helper.</li>
-            <br />
+          <ol className={css(styles.ol)}>
+            <li className={css(styles.li)}>You post a request.</li>
+            <li className={css(styles.li)}>AncestorCloud helpers from around the world can view your request. Helpers may comment or send you a message with initial research or questions.</li>
+            <li className={css(styles.li)}>If a helper feels they can help with your request, they will submit a proposal that includes what they will do, and how much reward they would ask for.</li>
+            <li className={css(styles.li)}>You have a chance to approve or ask questions of the helper about their proposal and experience by messaging them on their profile.</li>
+            <li className={css(styles.li)}>Once you approve, we will send you an invoice for the full reward price upfront. We will keep payment in our secure holdings until the research is completed.</li>
+            <li className={css(styles.li)}>Once we have confirmed that the research is complete, we will release payment to the helper.</li>
           </ol>
         )
       },
