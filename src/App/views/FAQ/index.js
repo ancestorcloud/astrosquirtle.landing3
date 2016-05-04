@@ -25,12 +25,20 @@ const styles = StyleSheet.create({
   wrapper: {
     margin: '50px 0',
     width: '100%',
-    maxWidth: '800px'
+    maxWidth: '800px',
+
+    '@media (max-width: 800px)': {
+      margin: '5px 0 0'
+    }
   },
 
   box: {
     background: '#fff',
-    padding: '50px'
+    padding: '50px',
+
+    '@media (max-width: 700px)': {
+      padding: '20px'
+    }
   },
 
   header: {
@@ -40,9 +48,6 @@ const styles = StyleSheet.create({
   },
 
   questionAndAnswer: {
-    // ':not(:last-child)': {
-    //   marginBottom: '40px'
-    // }
     marginTop: '40px'
   },
 
