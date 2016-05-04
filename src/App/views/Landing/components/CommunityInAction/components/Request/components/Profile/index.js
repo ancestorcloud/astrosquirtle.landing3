@@ -5,6 +5,10 @@ import { colors } from 'settings.style'
 
 import Avatar from 'atm.Avatar'
 
+const nameToInitials = (fullName) =>
+  fullName.split(' ')
+  .map((name) => name.charAt(0))
+
 const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true }) => {
   const imageNode = (
     <div className={css(styles.avatarWrapper)}>
@@ -18,9 +22,15 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
   const textNode = (
     <div className={css(styles.textNode)}>
       <div className={css(styles.personWrapper)}>
-        <div className={css(styles.inlineAvatarWrapper)}>
-          <Avatar src={avatar} size={50} />
-        </div>
+        {
+          avatar
+          ? (
+            <div className={css(styles.inlineAvatarWrapper)}>
+              <Avatar src={avatar} size={50} />
+            </div>
+          )
+          : null
+        }
         <div>
           <div className={css(styles.nameAndFlag)}>
             <div className={css(styles.name)}>{name}</div>

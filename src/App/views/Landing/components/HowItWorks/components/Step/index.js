@@ -7,12 +7,14 @@ const Step = ({ number, title, description, image, imageFirst }) => (
   <div className={imageFirst ? css(styles.Step, styles['Step-imageFirst']) : css(styles.Step)}>
     <div className={css(styles.textNode)}>
       <div className={css(styles.number)}>{`0${number}`}</div>
-      <div className={css(styles.title)}>
-        <span className={css(styles.inlineNumber)}>Step {number}: </span>
-        {title}
+      <div className={css(styles.text)}>
+        <div className={css(styles.title)}>
+          <span className={css(styles.inlineNumber)}>Step {number}: </span>
+          {title}
+        </div>
+        <div className={css(styles.separator)} />
+        <div className={css(styles.description)}>{description}</div>
       </div>
-      <div className={css(styles.separator)} />
-      <div className={css(styles.description)}>{description}</div>
     </div>
     <div>
       <img
@@ -108,8 +110,12 @@ const styles = StyleSheet.create({
     }
   },
 
-  title: {
+  text: {
     zIndex: '2',
+    position: 'relative'
+  },
+
+  title: {
     fontFamily: 'Playfair Display',
     fontSize: '1.6em',
     letterSpacing: '2px',
