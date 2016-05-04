@@ -30,7 +30,7 @@ export default [
     },
     helper: {
       name: 'Peter Paluszewski',
-      avatar: defaultAvatar,
+      avatar: null,
       description: 'Helper in Denmark',
       about: 'Peter, a genealogist in Denmark, was able to find and read Danish records that were invaluable to Jan\'s research.',
       flagSrc: flags.denmark
@@ -39,7 +39,7 @@ export default [
   {
     seeker: {
       name: 'Maria Tegtmeier',
-      avatar: defaultAvatar,
+      avatar: null,
       description: 'Researcher in the United States',
       about: 'Maria was looking for someone in Poland to find parish records about the Klemin family.',
       flagSrc: flags.unitedStates
