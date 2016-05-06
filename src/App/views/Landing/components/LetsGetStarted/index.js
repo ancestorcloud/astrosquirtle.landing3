@@ -9,12 +9,14 @@ import { links } from 'config.definitions'
 
 const LetsGetStarted = () => (
   <div className={css(styles.LetsGetStarted)}>
-    <a href={links.registration} onClick={ctaOnClick}>
-      <Btn
-        copy={'Let\'s get started'}
-        size='big'
-      />
-    </a>
+    <div className={css(styles.buttonWrapper)}>
+      <a href={links.registration} onClick={ctaOnClick}>
+        <Btn
+          copy={'Let\'s get started'}
+          size='big'
+        />
+      </a>
+    </div>
   </div>
 )
 
@@ -47,5 +49,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+
+  buttonWrapper: {
+    width: '300px',
+    fontSize: '20px'
   }
 })
