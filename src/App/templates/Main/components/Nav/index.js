@@ -91,7 +91,7 @@ function ctaOnClick () {
 const styles = StyleSheet.create({
   Nav: {
     width: '100%',
-    height: '80px',
+    height: '85px',
     padding: '40px',
     fontFamily: 'Bebas Neue',
     fontSize: '1.1em',
