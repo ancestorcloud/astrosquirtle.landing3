@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     height: '80px',
     padding: '40px',
     fontFamily: 'Bebas Neue',
+    fontSize: '1.1em',
     letterSpacing: '2px',
 
     display: 'flex',
