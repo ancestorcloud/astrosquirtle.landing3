@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
   },
 
   buttonWrapper: {
-    width: '300px',
+    width: '100%',
+    maxWidth: '300px',
     fontSize: '20px'
   }
 })
