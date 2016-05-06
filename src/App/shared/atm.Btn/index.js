@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Bebas Neue',
     textTransform: 'uppercase',
     letterSpacing: '2px',
-    color: 'white'
+    color: 'white',
+    cursor: 'pointer',
+    outline: 'none'
   },
 
   'button-big': {
