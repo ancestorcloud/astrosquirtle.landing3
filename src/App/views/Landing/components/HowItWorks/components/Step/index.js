@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
   },
 
   description: {
+    fontStyle: 'italic',
     color: colors.cadetBlue
   },
 
