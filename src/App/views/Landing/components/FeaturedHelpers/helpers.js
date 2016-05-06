@@ -41,5 +41,10 @@ const tom = {
 }
 
 export default [
-  kathy, robert, kinga, barbara, shelley, tom
+  shelley,
+//  kathy,
+  robert,
+  kinga,
+//  barbara,
+  tom
 ]
