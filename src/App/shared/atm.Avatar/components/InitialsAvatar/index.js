@@ -18,10 +18,7 @@ const Avatar = ({ size, style, initials }) => (
 )
 
 Avatar.propTypes = {
-  initials: PropTypes.shape([
-    PropTypes.string,
-    PropTypes.string
-  ]),
+  initials: PropTypes.array,
   size: PropTypes.number
 }
 
