@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 
   description: {
     fontStyle: 'italic',
-    color: colors.cadetBlue
+    color: colors.grey
   },
 
   img: {
