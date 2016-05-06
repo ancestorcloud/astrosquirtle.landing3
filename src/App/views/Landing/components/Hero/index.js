@@ -3,47 +3,35 @@ import { StyleSheet, css } from 'aphrodite'
 
 import Btn from 'atm.Btn'
 
-import { colors } from 'settings.style'
-
 import { links } from 'config.definitions'
 
 const Hero = () => (
   <div className={css(styles.Hero)}>
-    <div className={css(styles.bifurcation)}>
-      <div className={css(styles.bifurcationChild)}>
-        <div className={css(styles.image, styles.image0)} />
-        <div className={css(styles.textWrapper)}>
-          <div className={css(styles.text)}>Pay researchers to help with your family discovery.</div>
-          <div className={css(styles.buttonWrapper)}>
-            <Btn
-              copy='Post a request'
-              size='big'
-              onClick={() => {}}
-            />
-          </div>
-        </div>
-      </div>
-      <div className={css(styles.orWrapper)}>
-        <div className={css(styles.or)}>or</div>
-      </div>
-      <div className={css(styles.bifurcationChild)}>
-        <div className={css(styles.image, styles.image1)} />
-        <div className={css(styles.textWrapper)}>
-          <div className={css(styles.text)}>Help others with genealogy and be rewarded.</div>
-          <div className={css(styles.buttonWrapper)}>
-            <Btn
-              copy='Fulfill a request'
-              size='big'
-              onClick={() => {}}
-            />
-          </div>
-        </div>
+    <div className={css(styles.images)}>
+      <div className={css(styles.image, styles.image0)} />
+      <div className={css(styles.image, styles.image1)} />
+    </div>
+    <div className={css(styles.content)}>
+      <div className={css(styles.textMinor)}>Connecting family researchers with</div>
+      <div className={css(styles.textMajor)}>genealogy experts</div>
+      <div className={css(styles.textMinor)}>& willing helpers from around the world</div>
+      <div className={css(styles.buttonWrapper)}>
+        <a href={links.community} onClick={ctaOnClick}>
+          <Btn
+            copy='Find A Helper'
+            style={{
+              padding: '20px 50px',
+              fontSize: '20px'
+            }}
+          />
+        </a>
       </div>
     </div>
   </div>
 )
 
 function ctaOnClick () {
+
   if (window.ga) {
     window.ga('send', 'event', {
       eventCategory: 'Landing',
@@ -58,6 +46,7 @@ function ctaOnClick () {
       {source: 'main'}
     )
   }
+
 }
 
 const stretchStyle = {
@@ -69,8 +58,6 @@ const stretchStyle = {
   width: '100%',
   height: '100%'
 }
-
-const orSize = 80
 
 const styles = StyleSheet.create({
   Hero: {
@@ -84,6 +71,7 @@ const styles = StyleSheet.create({
     ...stretchStyle,
     textTransform: 'uppercase',
     textAlign: 'center',
+    textShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
     fontSize: '30px',
     color: 'white',
 
@@ -110,51 +98,24 @@ const styles = StyleSheet.create({
     }
   },
 
-  // buttonWrapper: {
-  //   marginTop: '80px'
-  // },
+  buttonWrapper: {
+    marginTop: '80px'
+  },
 
-  bifurcation: {
+  images: {
     ...stretchStyle,
-    position: 'relative',
+    position: 'absolute',
+    opacity: '0.8',
+
     display: 'flex'
   },
 
-  bifurcationChild: {
-    zIndex: '1',
-    position: 'relative',
-    width: '100%'
-  },
-
   image: {
-    ...stretchStyle,
+    width: '100%',
+    height: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    opacity: 0.8
-  },
-
-  textWrapper: {
-    ...stretchStyle,
-
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  text: {
-    width: '500px',
-    textAlign: 'center',
-    fontFamily: 'Bebas Neue',
-    fontSize: '30px',
-    textShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
-    color: '#fff',
-    letterSpacing: '3px'
-  },
-
-  buttonWrapper: {
-    marginTop: '30px'
+    backgroundSize: 'cover'
   },
 
   image0: {
@@ -163,31 +124,6 @@ const styles = StyleSheet.create({
 
   image1: {
     backgroundImage: 'url(/assets/images/Hero/helper.png)'
-  },
-
-  orWrapper: {
-    zIndex: '2',
-    margin: `0 ${orSize * -0.5}px`,
-    height: '100%',
-
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  or: {
-    borderRadius: '50%',
-    background: colors.ebonyClay,
-    width: '80px',
-    height: '80px',
-    fontWeight: 'bold',
-    fontSize: '24px',
-    color: '#fff',
-    textTransform: 'uppercase',
-
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
   }
 })
 
