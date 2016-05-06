@@ -25,11 +25,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Bebas Neue',
     textTransform: 'uppercase',
     letterSpacing: '2px',
-    color: 'white'
+    color: 'white',
+    cursor: 'pointer',
+    outline: 'none'
   },
 
   'button-big': {
-    padding: '20px 30px',
-    fontSize: '1.3em'
+    width: '100%',
+    padding: '20px 30px'
   }
 })

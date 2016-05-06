@@ -10,7 +10,8 @@ export const colors = {
   radicalRed: '#f9326b',
   ebonyClay: '#232939',
   malachite: '#07BC3C',
-  aluminium: '#a5aab8'
+  aluminium: '#a5aab8',
+  grey: '#7e7e7e'
 }
 
 export const fonts = {

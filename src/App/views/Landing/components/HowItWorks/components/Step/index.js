@@ -128,13 +128,14 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    margin: '20px 0',
+    margin: '27px 0',
     borderBottom: `2px solid ${colors.radicalRed}`,
     width: '34px'
   },
 
   description: {
-    color: colors.cadetBlue
+    fontStyle: 'italic',
+    color: colors.grey
   },
 
   img: {

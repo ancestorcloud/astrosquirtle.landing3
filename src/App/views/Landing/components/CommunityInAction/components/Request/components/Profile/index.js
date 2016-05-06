@@ -45,7 +45,7 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
           <div className={css(styles.description)}>{description}</div>
         </div>
       </div>
-      <div className={css(styles.about)}>&quot;{about}&quot;</div>
+      <div className={css(styles.about)}>{about}</div>
     </div>
   )
 

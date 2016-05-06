@@ -6,33 +6,49 @@ import { colors } from 'settings.style'
 import Avatar from 'atm.Avatar'
 
 const Request = ({
-  avatar,
+  user: {
+    avatar,
+    name
+  },
   title,
   description,
   reward
-}) => (
-  <div className={css(styles.Request)}>
-    <div className={css(styles.avatarWrapper)}>
+}) => {
+  const avatarNode =
+    avatar
+    ? (
       <Avatar
         src={avatar}
         size={50}
       />
-    </div>
-    <div className={css(styles.textNode)}>
-      <div className={css(styles.topFlex)}>
-        <div className={css(styles.inlineAvatarWrapper)}>
-          <Avatar src={avatar} size={50} />
+    )
+    : (
+      <Avatar
+        initials={name.split(' ').map((n) => n.charAt(0))}
+        size={50}
+      />
+    )
+  return (
+    <div className={css(styles.Request)}>
+      <div className={css(styles.avatarWrapper)}>
+        {avatarNode}
+      </div>
+      <div className={css(styles.textNode)}>
+        <div className={css(styles.topFlex)}>
+          <div className={css(styles.inlineAvatarWrapper)}>
+            {avatarNode}
+          </div>
+          <div className={css(styles.title)}>{title}</div>
         </div>
-        <div className={css(styles.title)}>{title}</div>
-      </div>
-      <div className={css(styles.description)}>{description}</div>
-      <div className={css(styles.reward)}>
-        <span>Reward: </span>
-        <span className={css(styles.rewardAmount)}>${reward}</span>
+        <div className={css(styles.description)}>{description}</div>
+        <div className={css(styles.reward)}>
+          <span>Reward: </span>
+          <span className={css(styles.rewardAmount)}>${reward}</span>
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 Request.propTypes = {
   owner: PropTypes.shape({
