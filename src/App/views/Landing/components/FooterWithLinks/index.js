@@ -52,6 +52,10 @@ const linkGroups = [
       }, {
         copy: 'Login',
         href: links.login
+      },
+      {
+        copy: 'Sign up to help',
+        href: links.registration
       }
     ]
   }
