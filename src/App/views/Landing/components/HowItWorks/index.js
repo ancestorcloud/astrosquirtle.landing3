@@ -10,8 +10,8 @@ const imagePath = '/assets/images/HowItWorks/'
 
 const HIWSteps = [
   {
-    title: 'Post your request',
-    description: 'Include all of the information you have, what you need, and how much you\'re willing to pay.',
+    title: 'Post a request for research help',
+    description: 'Post a request with all of the information you have, what you need, and how much you\'re willing to pay.',
     image: {
       src: `${imagePath}oldPhotos.png`,
       width: 400

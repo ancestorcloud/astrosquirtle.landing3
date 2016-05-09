@@ -10,6 +10,7 @@ const Avatar = (props) =>
 
 Avatar.propTypes = {
   src: PropTypes.string,
+  initials: PropTypes.array,
   size: PropTypes.number
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
+import { mediaAt } from 'utils.styling'
 
 import Logo from 'atm.Logo'
 import Btn from 'atm.Btn'
@@ -21,6 +22,10 @@ const linksData = [
   {
     copy: 'Login',
     href: links.login
+  },
+  {
+    copy: 'Sign up to help',
+    href: links.registration
   },
   {
     copy: 'Get Started',
@@ -71,7 +76,6 @@ const Nav = () => (
 export default Nav
 
 function ctaOnClick () {
-
   if (window.ga) {
     window.ga('send', 'event', {
       eventCategory: 'Landing',
@@ -79,7 +83,7 @@ function ctaOnClick () {
       eventLabel: 'Clicked'
     })
   }
-  
+
   if (window.mixpanel) {
     window.mixpanel.track(
       'Landed',
@@ -101,13 +105,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
 
-    '@media (max-width: 600px)': {
+    [mediaAt(900)]: {
       padding: '10px'
     }
   },
 
   'logo-big': {
-    '@media (max-width: 550px)': {
+    [mediaAt(700)]: {
       display: 'none'
     }
   },
@@ -115,7 +119,7 @@ const styles = StyleSheet.create({
   'logo-small': {
     display: 'none',
     width: '30px',
-    '@media (max-width: 550px)': {
+    [mediaAt(700)]: {
       display: 'block'
     }
   },
@@ -124,32 +128,33 @@ const styles = StyleSheet.create({
     listStyleType: 'none',
     margin: 0,
     padding: 0,
-    width: '380px',
 
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
 
-    '@media (max-width: 800px)': {
-      width: '300px'
+    [mediaAt(550)]: {
+      fontSize: '13px'
     },
 
-    '@media (max-width: 550px)': {
-      width: '240px',
-      fontSize: '13px'
+    [mediaAt(450)]: {
+      fontSize: '11px'
     }
   },
 
   link: {
-    margin: 0,
+    margin: '0 20px',
     padding: 0,
     textTransform: 'uppercase',
     textDecoration: 'none',
     color: colors.aluminium,
 
-    ':not(:last-child)': {
-      margin: 0,
-      padding: 0
+    [mediaAt(800)]: {
+      margin: '0 10px'
+    },
+
+    [mediaAt(500)]: {
+      margin: '0 5px'
     }
   }
 })
