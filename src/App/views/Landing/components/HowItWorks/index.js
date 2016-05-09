@@ -41,8 +41,8 @@ const HIWSteps = [
 const HowItWorks = () => (
   <div className={css(styles.HowItWorks)}>
     <div className={css(styles.top)}>
-      <Header copy={'How It Works'} size='medium' />
-      <div>In three easy steps, connect with helpers from across the globe</div>
+      <div className={css(styles.header)}>How It Works</div>
+      <div className={css(styles.headerExplainer)}>In three easy steps, connect with helpers from across the globe.</div>
     </div>
     <div style={{
       width: '100px',
@@ -81,6 +81,21 @@ const styles = StyleSheet.create({
   top: {
     padding: '60px',
     textAlign: 'center'
+  },
+
+  header: {
+    fontFamily: 'Playfair Display',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    fontSize: '2.5em'
+  },
+
+  headerExplainer: {
+    marginTop: '10px',
+    fontStyle: 'italic',
+    fontSize: '1.3em',
+    color: colors.grey
   },
 
   /**
