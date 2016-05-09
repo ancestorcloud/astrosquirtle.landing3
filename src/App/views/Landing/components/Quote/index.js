@@ -4,8 +4,8 @@ import { StyleSheet, css } from 'aphrodite'
 import { colors } from 'settings.style'
 
 const data = {
-  text: 'I see this as a great way to do genealogy research quickly and efficiently when traveling to the locations yourself isn\'t an option.',
-  source: 'Forbes'
+  text: 'I\'ve been trying to get this information for years. AncestorCloud made it all possible. Thanks so much.',
+  source: 'Fred Robson'
 }
 
 const Quote = () => (
