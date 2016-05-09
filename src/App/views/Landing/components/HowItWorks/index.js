@@ -19,7 +19,7 @@ const HIWSteps = [
   },
   {
     title: 'Choose a helper to work with',
-    description: 'We have access to a network of expert researchers from all around the world. These researchers will place bids on your request. Once you accept a bid, that helper will begin helping with your request.',
+    description: 'We have access to a network of expert researchers from all around the world. These researchers will submit proposals on your request. Once you accept a proposal, that helper will begin helping with your request.',
     image: {
       src: `${imagePath}map.png`,
       width: 500
