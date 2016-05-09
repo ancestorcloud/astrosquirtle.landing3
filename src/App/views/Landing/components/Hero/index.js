@@ -12,23 +12,38 @@ const Hero = () => (
       <div className={css(styles.image, styles.image1)} />
     </div>
     <div className={css(styles.content)}>
-      <div className={css(styles.textMinor)}>Connecting family researchers with</div>
-      <div className={css(styles.textMajor)}>genealogy experts</div>
-      <div className={css(styles.textMinor)}>& willing helpers from around the world</div>
+      <div className={css(styles.textMinor)}>The easiest way to</div>
+      <div className={css(styles.textMajor)}>discover your family</div>
       <div className={css(styles.buttonWrapper)}>
-        <a href={links.community}>
+        <a href={links.community} onClick={ctaOnClick}>
           <Btn
-            copy='Find A Helper'
-            style={{
-              padding: '20px 50px',
-              fontSize: '20px'
-            }}
+            copy={'Let\'s get started'}
+            size='big'
           />
         </a>
       </div>
     </div>
   </div>
 )
+
+function ctaOnClick () {
+
+  if (window.ga) {
+    window.ga('send', 'event', {
+      eventCategory: 'Landing',
+      eventAction: 'Find A Helper',
+      eventLabel: 'Clicked'
+    })
+  }
+
+  if (window.mixpanel) {
+    window.mixpanel.track(
+      'Landed',
+      {source: 'main'}
+    )
+  }
+
+}
 
 const stretchStyle = {
   position: 'absolute',
@@ -80,7 +95,10 @@ const styles = StyleSheet.create({
   },
 
   buttonWrapper: {
-    marginTop: '80px'
+    marginTop: '40px',
+    width: '100%',
+    maxWidth: '300px',
+    fontSize: '20px'
   },
 
   images: {

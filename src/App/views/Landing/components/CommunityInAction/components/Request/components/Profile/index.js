@@ -5,6 +5,10 @@ import { colors } from 'settings.style'
 
 import Avatar from 'atm.Avatar'
 
+const nameToInitials = (fullName) =>
+  fullName.split(' ')
+  .map((name) => name.charAt(0))
+
 const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true }) => {
   const imageNode = (
     <div className={css(styles.avatarWrapper)}>
@@ -18,9 +22,15 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
   const textNode = (
     <div className={css(styles.textNode)}>
       <div className={css(styles.personWrapper)}>
-        <div className={css(styles.inlineAvatarWrapper)}>
-          <Avatar src={avatar} size={50} />
-        </div>
+        {
+          avatar
+          ? (
+            <div className={css(styles.inlineAvatarWrapper)}>
+              <Avatar src={avatar} size={50} />
+            </div>
+          )
+          : null
+        }
         <div>
           <div className={css(styles.nameAndFlag)}>
             <div className={css(styles.name)}>{name}</div>
@@ -35,7 +45,7 @@ const Profile = ({ name, avatar, description, about, flagSrc, imageFirst = true 
           <div className={css(styles.description)}>{description}</div>
         </div>
       </div>
-      <div className={css(styles.about)}>&quot;{about}&quot;</div>
+      <div className={css(styles.about)}>{about}</div>
     </div>
   )
 
@@ -60,7 +70,7 @@ Profile.propTypes = {
 
 export default Profile
 
-const flagWidth = 24
+const flagWidth = 32
 
 const compactWidth = 600
 const compactLayout = `@media (max-width: ${compactWidth}px)`
@@ -120,7 +130,8 @@ const styles = StyleSheet.create({
 
   flag: {
     margin: '0 16px',
-    width: `${flagWidth}px`
+    width: `${flagWidth}px`,
+    boxShadow: '0 0 1px 1px rgba(0, 0, 0, 0.15)'
   },
 
   description: {

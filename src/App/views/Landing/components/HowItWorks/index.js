@@ -10,16 +10,16 @@ const imagePath = '/assets/images/HowItWorks/'
 
 const HIWSteps = [
   {
-    title: 'Post your request',
-    description: 'Include all of the information you have, what you need, and how much you\'re willing to pay.',
+    title: 'Post a request for research help',
+    description: 'Post a request with all of the information you have, what you need, and how much you\'re willing to pay.',
     image: {
       src: `${imagePath}oldPhotos.png`,
       width: 400
     }
   },
   {
-    title: 'Connect with helpers from around the globe',
-    description: 'We have access to a network of expert researchers from all around the world. These researchers will place bids on your request. Once you accept a bid, you\'ll be connected to that helper.',
+    title: 'Choose a helper to work with',
+    description: 'We have access to a network of expert researchers from all around the world. These researchers will submit proposals on your request. Once you accept a proposal, that helper will begin helping with your request.',
     image: {
       src: `${imagePath}map.png`,
       width: 500
@@ -41,8 +41,8 @@ const HIWSteps = [
 const HowItWorks = () => (
   <div className={css(styles.HowItWorks)}>
     <div className={css(styles.top)}>
-      <Header copy={'How It Works'} size='medium' />
-      <div>In three easy steps, connect with helpers from across the globe</div>
+      <div className={css(styles.header)}>How It Works</div>
+      <div className={css(styles.headerExplainer)}>In three easy steps, connect with helpers from across the globe.</div>
     </div>
     <div style={{
       width: '100px',
@@ -81,6 +81,21 @@ const styles = StyleSheet.create({
   top: {
     padding: '60px',
     textAlign: 'center'
+  },
+
+  header: {
+    fontFamily: 'Playfair Display',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    fontSize: '2.5em'
+  },
+
+  headerExplainer: {
+    marginTop: '10px',
+    fontStyle: 'italic',
+    fontSize: '1.3em',
+    color: colors.grey
   },
 
   /**

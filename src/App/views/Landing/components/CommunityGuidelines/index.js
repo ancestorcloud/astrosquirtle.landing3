@@ -182,6 +182,9 @@ const styles = StyleSheet.create({
 
   content: {
     background: 'white',
-    padding: '60px'
+    padding: '60px',
+    fontSize: '18px',
+    lineHeight: '1.5em',
+    color: colors.grey
   }
 })

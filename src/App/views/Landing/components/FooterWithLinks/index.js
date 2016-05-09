@@ -38,8 +38,12 @@ const linkGroups = [
     ]
   },
   {
-    title: 'Our Site',
+    title: 'Community',
     links: [
+      {
+        copy: 'Apply to help',
+        href: links.registration
+      },
       {
         copy: 'Helpers',
         href: links.community
