@@ -38,7 +38,7 @@ const linkGroups = [
     ]
   },
   {
-    title: 'Our Site',
+    title: 'Community',
     links: [
       {
         copy: 'Helpers',
@@ -54,7 +54,7 @@ const linkGroups = [
         href: links.login
       },
       {
-        copy: 'Sign up to help',
+        copy: 'Apply to help',
         href: links.registration
       }
     ]

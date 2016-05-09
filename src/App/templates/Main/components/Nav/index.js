@@ -24,11 +24,11 @@ const linksData = [
     href: links.login
   },
   {
-    copy: 'Sign up to help',
+    copy: 'Apply to help',
     href: links.registration
   },
   {
-    copy: 'Get Started',
+    copy: 'Sign up',
     href: links.registration,
     isButton: true,
     onClick: ctaOnClick
