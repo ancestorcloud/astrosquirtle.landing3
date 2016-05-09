@@ -11,6 +11,7 @@ const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={MainTemplate(Landing)} />
     <Route path='/faq' component={MainTemplate(FAQ)} />
+    <Route path='*' component={MainTemplate(Landing)} />
   </Route>
 )
 
