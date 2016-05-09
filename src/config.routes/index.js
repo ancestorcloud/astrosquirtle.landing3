@@ -1,5 +1,5 @@
 import React from 'react'
-import { IndexRoute, DefaultRoute, Route } from 'react-router'
+import { IndexRoute, Route } from 'react-router'
 import App from 'App'
 
 import Landing from 'App/views/Landing'
