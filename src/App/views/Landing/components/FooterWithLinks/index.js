@@ -38,7 +38,7 @@ const linkGroups = [
     ]
   },
   {
-    title: 'Our Site',
+    title: 'Community',
     links: [
       {
         copy: 'Helpers',
