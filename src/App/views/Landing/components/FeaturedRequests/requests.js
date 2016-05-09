@@ -69,7 +69,7 @@ const kerrysRequest = {
 }
 
 const skyesRequest = {
-  title: 'James Collins',
+  title: 'James Collins, Ireland and Kroonstad',
   reward: 85,
   description: `James Collins, my 3rd great-grandfather, was born in Ireland on August 12th, 1804. James' death notice says that his parents were Daniel and Margaret Collins. He died in Kroonstad on January 26th, 1872. I want to know when James arrived in South Africa and where specifically in Ireland he came from. Family legend has it that the infamous Michael Collins was related to him. I'm hoping that his arrival into South Africa provides new information.`,
   user: {
