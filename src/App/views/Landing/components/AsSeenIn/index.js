@@ -21,7 +21,7 @@ const images = [
     width: 120
   },
   {
-    name: 'businessInsider2.png',
+    name: 'businessInsider.png',
     width: 120
   },
   {
