@@ -5,24 +5,24 @@ const imagePath = '/assets/images/AsSeenIn'
 
 const images = [
   {
-    name: 'techstars.png',
-    width: 90
-  },
-  {
     name: 'ksl.png',
     width: 120
-  },
-  {
-    name: 'siliconslopes.png',
-    width: 100
   },
   {
     name: 'beehivestartups.png',
     width: 120
   },
   {
+    name: 'techstars.png',
+    width: 90
+  },
+  {
     name: 'forbes.png',
     width: 120
+  },
+  {
+    name: 'businessInsider.png',
+    width: 170
   },
   {
     name: 'thedenverpost.png',
