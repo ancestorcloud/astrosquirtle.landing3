@@ -41,6 +41,10 @@ const linkGroups = [
     title: 'Community',
     links: [
       {
+        copy: 'Apply to help',
+        href: links.registration
+      },
+      {
         copy: 'Helpers',
         href: links.community
       }, {
@@ -52,10 +56,6 @@ const linkGroups = [
       }, {
         copy: 'Login',
         href: links.login
-      },
-      {
-        copy: 'Apply to help',
-        href: links.registration
       }
     ]
   }
