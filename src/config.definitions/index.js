@@ -17,7 +17,7 @@ export const links = {
   googlePlus: 'https://plus.google.com/101239994939407143407',
 
   // blog
-  blog: 'http://ancestorcloud.com/blog',
+  blog: 'http://blog.ancestorcloud.com',
 
   // landing
   faq: '/#/faq',
