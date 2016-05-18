@@ -17,9 +17,9 @@ module.exports = {
             '<meta name="viewport" content="width=device-width, initial-scale=1">',
 
             '<meta property="og:title" content="' + config.title + '" />',
-            '<meta property="og:site_name" content="' + data.siteName + '" />',
+            '<meta property="og:site_name" content="' + config.siteName + '" />',
             '<meta property="og:description" content="' + config.description + '" />',
-            '<meta property="og:image" content="' + data.favicon + '" />',
+            '<meta property="og:image" content="' + config.bannerImg + '" />',
 
             '<title>' + config.title + '</title>',
             '<link rel="icon" href="' + config.favicon + '" type="image/x-icon" />',
@@ -50,8 +50,8 @@ module.exports = {
 
             '<meta property="og:title" content="' + config.title + '" />',
             '<meta property="og:description" content="' + config.description + '" />',
-            '<meta property="og:image" content="' + data.favicon + '" />',
-            '<meta property="og:site_name" content="' + data.siteName + '" />',
+            '<meta property="og:image" content="' + config.bannerImg + '" />',
+            '<meta property="og:site_name" content="' + config.siteName + '" />',
 
             '<title>' + config.title + '</title>',
             '<link rel="icon" href="' + config.favicon + '" type="image/x-icon" />',
