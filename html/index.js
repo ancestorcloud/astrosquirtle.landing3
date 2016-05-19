@@ -11,7 +11,7 @@ const config = {
   siteName: 'AncestorCloud',
   description: 'AncestorCloud is a marketplace for family history research.',
   favicon: '/assets/icons/favicon.ico',
-  bannerImg: 'https://ancestorcloud.com/assets/images/Hero/seeker.png', /* 1 */
+  bannerImg: 'https://ancestorcloud.com/assets/images/facebookShareBanner.jpg', /* 1 */
 
   prod: {
     gaId: 'UA-47141819-1',
