@@ -22,7 +22,7 @@ export default [
           <div>
             {[
               'Using AncestorCloud to view and post requests and participate in the community is free.',
-              'When a seeker accepts a helper\'s proposal, the seeker will be charged 5%-15% of the total reward, depending on the amount of the reward. If the amount of the reward changes, the marketplace/convenience fee will be changed to reflect 5%-15% of the total reward amount. This fee is kept by AncestorCloud in the case of less than satisfactory results from the helper.',
+              'When a seeker accepts a helper\'s proposal, the seeker will be charged 5%-15% of the total reward, depending on the amount of the reward. If the amount of the reward changes, the marketplace/convenience fee will be changed to reflect 5%-15% of the total reward amount. AncestorCloud keeps this fee regardless of the results of the request.',
               'Helpers will take home 85%-90% of their total earnings for each request they complete, depending on the amount of the reward.',
               'AncestorCloud is excited about making family history and genealogy accessible to as many people as possible. The marketplace fee allows us to provide support and the best possible platform for you to continue to connect with other researchers.'
             ].map((p, i) => <p key={i} className={css(styles.p)}>{p}</p>)}
