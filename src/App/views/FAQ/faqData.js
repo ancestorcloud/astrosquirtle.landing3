@@ -6,7 +6,10 @@ const listSpacingStyle = { marginLeft: '15px' }
 const styles = StyleSheet.create({
   ul: listSpacingStyle,
   ol: listSpacingStyle,
-  li: listSpacingStyle
+  li: listSpacingStyle,
+  p: {
+    margin: '8px 0'
+  }
 })
 
 export default [
@@ -15,7 +18,16 @@ export default [
     data: [
       {
         title: 'How much does AncestorCloud cost?',
-        content: <p>Using AncestorCloud to view and post requests and participate in the community is free. AncestorCloud's ability to provide these services comes from a small portion of the reward exchanged after research help has been completed to the requester's satisfaction.</p>
+        content: (
+          <div>
+            {[
+              'Using AncestorCloud to view and post requests and participate in the community is free.',
+              'When a seeker accepts a helper\'s proposal, the seeker will be charged 5%-15% of the total reward, depending on the amount of the reward. If the amount of the reward changes, the marketplace/convenience fee will be changed to reflect 5%-15% of the total reward amount. AncestorCloud keeps this fee regardless of the results of the request.',
+              'Helpers will take home 85%-90% of their total earnings for each request they complete, depending on the amount of the reward.',
+              'AncestorCloud is excited about making family history and genealogy accessible to as many people as possible. The marketplace fee allows us to provide support and the best possible platform for you to continue to connect with other researchers.'
+            ].map((p, i) => <p key={i} className={css(styles.p)}>{p}</p>)}
+          </div>
+        )
       },
       {
         title: 'How does helping others work?',
