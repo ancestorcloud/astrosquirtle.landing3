@@ -39,7 +39,7 @@ export default [
       },
       {
         title: 'What if nobody helps with my requests?',
-        content: <p>If your request isn’t responded to we will reach out personally to help you find what you are looking for. We’ve seen the best results achieved when the reward is fair, the details are clear, and all relevant documents are upload.</p>
+        content: <p>If your request isn’t responded to we will reach out personally to help you find what you are looking for. We’ve seen the best results achieved when the reward is fair, the details are clear, and all relevant documents are uploaded.</p>
       },
       {
         title: 'What happens if I do the work and the requester doesn\'t pay?',
