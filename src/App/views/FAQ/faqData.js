@@ -85,7 +85,7 @@ export default [
       },
       {
         title: 'Can I edit a request after I create it?',
-        content: <p>Yes, you can edit a request that you have created. Once you create a request, you can edit the request by selecting the request you would like to edit. Once you get to the page of the request, there is a button that says, “Edit request.”</p>
+        content: <p>Yes, you can edit a request that you have created. Go to <a href='https://app.ancestorcloud.com/#/getHelp'>Get Help</a>, and then click on the title of your request. Hover your mouse over the word, "Description," then the word "Edit" will appear to the right. Click "Edit," and make any changes you want to make. Then, go to the bottom of the page, and click "Save."</p>
       },
       {
         title: 'What if I find the solution to my own request after posting it to AncestorCloud?',
@@ -100,11 +100,12 @@ export default [
         content: (
           <ol className={css(styles.ol)}>
             <li className={css(styles.li)}>You post a request.</li>
-            <li className={css(styles.li)}>AncestorCloud helpers from around the world can view your request. Helpers may comment or send you a message with initial research or questions.</li>
-            <li className={css(styles.li)}>If a helper feels they can help with your request, they will submit a proposal that includes what they will do, and how much reward they would ask for.</li>
-            <li className={css(styles.li)}>You have a chance to approve or ask questions of the helper about their proposal and experience by messaging them on their profile.</li>
-            <li className={css(styles.li)}>Once you approve, we will send you an invoice for the full reward price upfront. We will keep payment in our secure holdings until the research is completed.</li>
-            <li className={css(styles.li)}>Once we have confirmed that the research is complete, we will release payment to the helper.</li>
+            <li className={css(styles.li)}>AncestorCloud helpers from around the world can view your request. Helpers may send you a message with initial research or clarifying questions.</li>
+            <li className={css(styles.li)}>If a helper feels (s)he can help with your request, the helper will submit a proposal that includes what (s)he will do, and how much reward (s)he would ask for.</li>
+            <li className={css(styles.li)}>You have a chance to ask questions of the helper about their proposal and experience by messaging them through their profile.</li>
+            <li className={css(styles.li)}>You can approve their proposal through the "Help" section of your request. Once you approve, you will pay the full reward price and our marketplace fee upfront. We will keep payment in our secure holdings until the research is completed.</li>
+            <li className={css(styles.li)}>While the helper works on your request, (s)he may send you progress updates in the "Progress" section of your request.</li>
+            <li className={css(styles.li)}>Once the helper submits completed research in the "Results" section of your request and you approve, we will release payment to the helper.</li>
           </ol>
         )
       },
@@ -114,15 +115,27 @@ export default [
       },
       {
         title: 'How do "rewards" work?',
-        content: <p>Before research is begun, you and the helper will agree upon a reward price, based on your suggested price and their reward price. AncestorCloud will send you an invoice at the beginning of the research, and will keep your payment in our secure holding until research is complete. Once the research is complete, the reward will be released to the helper.</p>
+        content: <p>Before research is begun, you and the helper will agree upon a reward price, based on your suggested price and their proposed price. When you approve a proposal, you will pay the amount of that proposal upfront through our website, and we will keep your payment in our secure holding until research is complete. Once the research is complete, the reward will be released to the helper.</p>
       },
       {
-        title: 'People are commenting on my request. How do I decide who receives payment?',
-        content: <p>Payment goes to helpers who have submitted proposals, whose proposals you have accepted. If someone is offering to help without submitting a proposal, you may ask them to submit a proposal. This allows AncestorCloud to support both you and the helper in the process.</p>
+        title: 'Several people have messaged me about my request. How do I decide who receives payment?',
+        content: <p>Payment goes to helpers who have submitted proposals, whose proposals you have accepted. If someone is offering to help without submitting a proposal, you should ask them to submit a proposal. This allows AncestorCloud to support both you and the helper in the process.</p>
       },
       {
         title: 'What if no one responds to my request? ',
         content: <p>You may search for helpers using the AncestorCloud map tool, and message any helper that lives in the right place or has the right expertise to help with your request. If have trouble finding a helper that you think could help with your request, contact AncestorCloud, and we will work to find a helper who is qualified and able to help with your request.</p>
+      },
+      {
+        title: 'What if I have not received a proposal that interests me?',
+        content: <div>
+          <p>Here are a few ideas that may assist you in connecting with a great helper:</p>
+          <ol className={css(styles.ol)}>
+            <li className={css(styles.li)}>Consider adding additional background or detail to your request. Be sure to consider adding information about the sources you have already checked (even if it was a dead end).</li>
+            <li className={css(styles.li)}>Consider increasing the reward amount. As you do that, think about the time and resources necessary for a helper to work on your request.</li>
+            <li className={css(styles.li)}>Use our map feature to contact helpers in the area in which you need help.</li>
+            <li className={css(styles.li)}>Contact us for any specific suggestions or feedback on your request.</li>
+          </ol>
+        </div>
       }
     ]
   }
