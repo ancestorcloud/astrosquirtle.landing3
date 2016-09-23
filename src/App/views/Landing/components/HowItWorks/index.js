@@ -27,7 +27,7 @@ const HIWSteps = [
   },
   {
     title: 'Get results',
-    description: 'You\'ll receive a report with all of the information you requested. If we don\'t get results, you don\'t pay a dime.',
+    description: `You'll receive a report with all of the research that was done. If the researcher does not do what was agreed upon, you don't pay a dime.`,
     image: {
       src: `${imagePath}laptop.png`,
       width: 500
