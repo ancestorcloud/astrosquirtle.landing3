@@ -12,12 +12,13 @@ const guidelinesData = [
     tabName: 'Seeker rules',
     content: (
       <ul>
-        <li>Don’t post private or personally-identifying information about living people.</li>
-        <li>To avoid duplicate research, share everything you know about the subject with your Helper, even if you think what you have doesn't apply to your specific research question.</li>
-        <li>Remember that genealogy is an inexact science. Sometimes definitive answers simply aren’t available.</li>
-        <li>If your helper worked hard to fulfill your request but came up short, please be generous and reward them for their effort.</li>
-        <li>When you accept a research proposal from a helper, you are agreeing to pay them for the research outlined in their proposal. If you have questions about their proposal, please ask them before they begin their research.</li>
-        <li>Consistent communication between you and your helper goes a long way!</li>
+        <li>{`Don’t post private or personally-identifying information about living people.`}</li>
+        <li>{`To avoid duplicate research, share everything you know about the subject with your Helper, even if you think what you have doesn't apply to your specific research question.`}</li>
+        <li>{`Remember that genealogy is an inexact science. Sometimes definitive answers simply aren’t available.`}</li>
+        <li>{`If your helper worked hard to fulfill your request but came up short, please be generous and reward them for their effort.`}</li>
+        <li>{`When you accept a research proposal from a helper, you are agreeing to pay them for the research outlined in their proposal. If you have questions about their proposal, please ask them before they begin their research.`}</li>
+        <li>{`Consistent communication between you and your helper goes a long way!`}</li>
+        <li>{`For any helper you meet on AncestorCloud, please move your project forward using AncestorCloud's messaging and transaction tools.`}</li>
       </ul>
     )
   },
@@ -25,12 +26,13 @@ const guidelinesData = [
     tabName: 'Helper rules',
     content: (
       <ul>
-        <li>When you submit a proposal, be specific and clear about the places you’ll search and the amount of time you’ll spend.</li>
-        <li>When you receive an assignment, reach out to the seeker and introduce yourself. Let them know you’re excited to help them out.</li>
-        <li>Share research plans with your Seeker. This will help them understand the process and manage their expectations.</li>
-        <li>Keep your Seeker informed on your progress by sending them "research updates."</li>
-        <li>When you’ve finished your research, send your Seeker a thorough report of your findings, including images of new evidence you’ve unearthed. Remember to cite your sources!</li>
-        <li>Remember you’ll be reviewed.</li>
+        <li>{`When you submit a proposal, be specific and clear about the places you’ll search and the amount of time you’ll spend.`}</li>
+        <li>{`When you receive an assignment, reach out to the seeker and introduce yourself. Let them know you’re excited to help them out.`}</li>
+        <li>{`For any client you meet on AncestorCloud, please use only the tools AncestorCloud provides for communication and transactions.`}</li>
+        <li>{`Share research plans with your Seeker. This will help them understand the process and manage their expectations.`}</li>
+        <li>{`Keep your Seeker informed on your progress by sending them "research updates."`}</li>
+        <li>{`When you’ve finished your research, send your Seeker a thorough report of your findings, including images of new evidence you’ve unearthed. Remember to cite your sources!`}</li>
+        <li>{`Remember you’ll be reviewed.`}</li>
       </ul>
     )
   },
