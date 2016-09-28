@@ -40,11 +40,11 @@ const guidelinesData = [
     tabName: 'Seeker support',
     content: (
       <ul>
-        <li>If you’re at all unsatisfied with the research a Helper has done for you, AncestorCloud is here to help.</li>
-        <li>Communicate respectfully and directly with the Helper about your questions or concerns with their research. Give them to opportunity to explain their work.</li>
-        <li>If your helper hasn’t performed the searches they agreed to do, please give them an opportunity to complete this research.</li>
-        <li>Any instances of dissatisfaction will be addressed on a case-by-case basis.</li>
-        <li>We’ll work with you and the researcher to make sure your request is completed to your satisfaction.</li>
+        <li>{`If you’re at all unsatisfied with the research a Helper has done for you, AncestorCloud is here to help.`}</li>
+        <li>{`Communicate respectfully and directly with the Helper about your questions or concerns with their research. Give them to opportunity to explain their work.`}</li>
+        <li>{`If your helper hasn’t performed the searches they agreed to do, please give them an opportunity to complete this research.`}</li>
+        <li>{`Any instances of dissatisfaction will be addressed on a case-by-case basis.`}</li>
+        <li>{`We’ll work with you and the researcher to make sure your request is completed to your satisfaction.`}</li>
       </ul>
     )
   },
@@ -52,8 +52,8 @@ const guidelinesData = [
     tabName: 'Helper support',
     content: (
       <ul>
-        <li>Thorough research has the full backing of AncestorCloud.</li>
-        <li>If you have conducted a full investigation of a Seeker's research request and they are unsatisfied with the outcome, please help them understand your research process. Please also let us know, and we will work alongside you to ensure a fair result.</li>
+        <li>{`Thorough research has the full backing of AncestorCloud.`}</li>
+        <li>{`If you have conducted a full investigation of a Seeker's research request and they are unsatisfied with the outcome, please help them understand your research process. Please also let us know, and we will work alongside you to ensure a fair result.`}</li>
       </ul>
     )
   }
