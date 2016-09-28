@@ -48,6 +48,10 @@ export default [
       {
         title: 'What if I am unhappy with the research?',
         content: <p>Please remember that genealogy is not an exact science. There may be times that a helper completes the research they agreed to do in their research proposal, but do not find the results you hoped for. In these cases, please remember the benefits of negative searches, as well as the time and effort they invested in your research, and reward them for accomplishing the searches they agreed to do. However, if a helper does not complete the research they agreed to do, we ensure a refund of your money.</p>
+      },
+      {
+        title: 'Can I use my personal email to communicate with people I meet on AncestorCloud?',
+        content: <p>Please keep all communication on the AncestorCloud website. This allows our team to provide better support to you and also allows us to continue making connections between researchers.</p>
       }
     ]
   },
