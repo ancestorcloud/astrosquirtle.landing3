@@ -1,87 +1,98 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
+import { connect } from 'react-redux'
 
 import Logo from 'atm.Logo'
 import LinkGroup from './components/LinkGroup'
 
 import { links } from 'config.definitions'
 
-const linkGroups = [
-  {
-    title: 'Social',
-    links: [
-      {
-        copy: 'Facebook',
-        href: links.facebook
-      }, {
-        copy: 'Twitter',
-        href: links.twitter
-      }, {
-        copy: 'Instagram',
-        href: links.instagram
-      }, {
-        copy: 'Google+',
-        href: links.googlePlus
-      }
-    ]
-  },
-  {
-    title: 'About',
-    links: [
-      {
-        copy: 'Blog',
-        href: links.blog
-      }, {
-        copy: 'FAQ',
-        href: links.faq
-      }
-    ]
-  },
-  {
-    title: 'Community',
-    links: [
-      {
-        copy: 'Apply to help',
-        href: links.registration
-      },
-      {
-        copy: 'Helpers',
-        href: links.community
-      }, {
-        copy: 'Requests',
-        href: links.helpOthers
-      }, {
-        copy: 'Register',
-        href: links.registration
-      }, {
-        copy: 'Login',
-        href: links.login
-      }
-    ]
-  }
-]
+const FooterWithLinks = ({ refCode }) => {
+  const refQueryParam = refCode
+    ? `?ref=${refCode}`
+    : ''
 
-const FooterWithLinks = () => (
-  <div className={css(styles.wrapper)}>
-    <div className={css(styles.flex)}>
-      <div className={css(styles.logoWrapper)}>
-        <Logo />
-      </div>
-      <div className={css(styles.linkGroupsWrapper)}>
+  const linkGroups = [
+    {
+      title: 'Social',
+      links: [
         {
-          linkGroups
-          .map((linkGroupData, i) => (
-            <div className={css(styles.linkGroupWrapper)} key={i}>
-              <LinkGroup {...linkGroupData} />
-            </div>
-          ))
+          copy: 'Facebook',
+          href: links.facebook
+        }, {
+          copy: 'Twitter',
+          href: links.twitter
+        }, {
+          copy: 'Instagram',
+          href: links.instagram
+        }, {
+          copy: 'Google+',
+          href: links.googlePlus
         }
+      ]
+    },
+    {
+      title: 'About',
+      links: [
+        {
+          copy: 'Blog',
+          href: links.blog
+        }, {
+          copy: 'FAQ',
+          href: links.faq
+        }
+      ]
+    },
+    {
+      title: 'Community',
+      links: [
+        {
+          copy: 'Apply to help',
+          href: `${links.registration}${refQueryParam}`
+        },
+        {
+          copy: 'Helpers',
+          href: `${links.community}${refQueryParam}`
+        }, {
+          copy: 'Requests',
+          href: `${links.helpOthers}${refQueryParam}`
+        }, {
+          copy: 'Register',
+          href: `${links.registration}${refQueryParam}`
+        }, {
+          copy: 'Login',
+          href: `${links.login}${refQueryParam}`
+        }
+      ]
+    }
+  ]
+
+  return (
+    <div className={css(styles.wrapper)}>
+      <div className={css(styles.flex)}>
+        <div className={css(styles.logoWrapper)}>
+          <Logo />
+        </div>
+        <div className={css(styles.linkGroupsWrapper)}>
+          {
+            linkGroups
+            .map((linkGroupData, i) => (
+              <div className={css(styles.linkGroupWrapper)} key={i}>
+                <LinkGroup {...linkGroupData} />
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
-export default FooterWithLinks
+const mapStateToProps = ({
+  session: { ref }
+}) => ({ refCode: ref })
+
+export default connect(mapStateToProps)(FooterWithLinks)
 
 const styles = StyleSheet.create({
   wrapper: {
