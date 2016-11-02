@@ -1,6 +1,8 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
+import { links } from 'config.definitions'
+
 const listSpacingStyle = { marginLeft: '15px' }
 
 const styles = StyleSheet.create({
@@ -89,7 +91,7 @@ export default [
       },
       {
         title: 'Can I edit a request after I create it?',
-        content: <p>Yes, you can edit a request that you have created. Go to <a href='https://app.ancestorcloud.com/#/getHelp'>Get Help</a>, and then click on the title of your request. Hover your mouse over the word, "Description," then the word "Edit" will appear to the right. Click "Edit," and make any changes you want to make. Then, go to the bottom of the page, and click "Save."</p>
+        content: <p>Yes, you can edit a request that you have created. Go to <a href={links.getHelp}>Get Help</a>, and then click on the title of your request. Hover your mouse over the word, "Description," then the word "Edit" will appear to the right. Click "Edit," and make any changes you want to make. Then, go to the bottom of the page, and click "Save."</p>
       },
       {
         title: 'What if I find the solution to my own request after posting it to AncestorCloud?',
