@@ -1,3 +1,5 @@
+import { APP_ROOT } from 'config.api'
+
 export const defaultAvatar = 'https://s3-us-west-2.amazonaws.com/astrocat-api/astrocat/avatars/aclogo-light-pink.svg'
 
 export const flags = {
@@ -7,9 +9,7 @@ export const flags = {
   poland: 'https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg'
 }
 
-const appRoot = __DEV__ // eslint-disable-line
-  ? 'https://staging.ancestorcloud.com/#/'
-  : 'https://app.ancestorcloud.com/#/'
+const appRoot = `${APP_ROOT}/#/`
 
 export const links = {
   // social
