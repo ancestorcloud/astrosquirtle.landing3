@@ -4,6 +4,11 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { updateSession } from 'App/state/session/actions'
 
+const referrerToRefCode = {
+  'http://trace.com.s3-website-us-west-2.amazonaws.com/page1.html': 'billiongraves',
+  'http://trace.com.s3-website-us-west-2.amazonaws.com/page2.html': 'billiongravesPlus'
+}
+
 const App = React.createClass({
   propTypes: {
     children: PropTypes.node,
@@ -12,8 +17,12 @@ const App = React.createClass({
 
   componentDidMount () {
     const ref = document.referrer
-    const { updateSession } = this.props
-    updateSession({ ref })
+    if (referrerToRefCode[ref]) {
+      const { updateSession } = this.props
+      updateSession({
+        ref: referrerToRefCode[ref]
+      })
+    }
   },
 
   render () {
