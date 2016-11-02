@@ -7,7 +7,9 @@ export const flags = {
   poland: 'https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg'
 }
 
-const appRoot = 'https://app.ancestorcloud.com/#/'
+const appRoot = __DEV__ // eslint-disable-line
+  ? 'https://staging.ancestorcloud.com/#/'
+  : 'https://app.ancestorcloud.com/#/'
 
 export const links = {
   // social
@@ -25,6 +27,7 @@ export const links = {
   // app
   community: `${appRoot}community`,
   helpOthers: `${appRoot}helpOthers`,
+  getHelp: `${appRoot}getHelp`,
   registration: `${appRoot}registration`,
   login: `${appRoot}login`
 }
