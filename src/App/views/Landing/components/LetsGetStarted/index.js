@@ -13,7 +13,7 @@ import { links } from 'config.definitions'
 const LetsGetStarted = () =>
   <div className={css(styles.LetsGetStarted)}>
     <div className={css(styles.buttonWrapper)}>
-      <a href={addRefToLink(links.registration)} onClick={ctaOnClick}>
+      <a onClick={ctaOnClick}>
         <Btn
           copy={'Let\'s get started'}
           size='big'
@@ -38,6 +38,10 @@ function ctaOnClick () {
       'Landed',
       {source: 'footer'}
     )
+  }
+
+  if (window) {
+    window.location.href = addRefToLink(links.registration)
   }
 }
 

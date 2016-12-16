@@ -17,7 +17,7 @@ const Hero = ({ refCode }) =>
       <div className={css(styles.textMinor)}>The easiest way to</div>
       <div className={css(styles.textMajor)}>discover your family</div>
       <div className={css(styles.buttonWrapper)}>
-        <a href={addRefToLink(links.registration)} onClick={ctaOnClick}>
+        <a onClick={ctaOnClick}>
           <Btn
             copy={'Let\'s get started'}
             size='big'
@@ -43,6 +43,10 @@ function ctaOnClick () {
       'Landed',
       {source: 'main'}
     )
+  }
+
+  if (window) {
+    window.location.href = addRefToLink(links.registration)
   }
 }
 

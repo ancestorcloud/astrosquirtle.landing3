@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { addRefToLink } from 'redux.store'
-
 import { StyleSheet, css } from 'aphrodite'
 
 import Logo from 'atm.Logo'
@@ -46,20 +44,20 @@ const FooterWithLinks = () => {
       links: [
         {
           copy: 'Apply to help',
-          href: addRefToLink(links.registration)
+          href: links.registration
         },
         {
           copy: 'Helpers',
-          href: addRefToLink(links.community)
+          href: links.community
         }, {
           copy: 'Requests',
-          href: addRefToLink(links.helpOthers)
+          href: links.helpOthers
         }, {
           copy: 'Register',
-          href: addRefToLink(links.registration)
+          href: links.registration
         }, {
           copy: 'Login',
-          href: addRefToLink(links.login)
+          href: links.login
         }
       ]
     }

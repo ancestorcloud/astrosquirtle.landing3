@@ -1,7 +1,15 @@
 import React, { PropTypes } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
+import { addRefToLink } from 'redux.store'
+
 import { colors } from 'settings.style'
+
+const onLinkClick = (href) => () => {
+  if (window) {
+    window.location.href = addRefToLink(href)
+  }
+}
 
 const LinkGroup = ({ title, links }) => (
   <div>
@@ -11,7 +19,7 @@ const LinkGroup = ({ title, links }) => (
         links
         .map(({ copy, href }, i) => (
           <li className={css(styles.li)} key={i}>
-            <a className={css(styles.link)} href={href}>{copy}</a>
+            <a className={css(styles.link)} onClick={onLinkClick(href)}>{copy}</a>
           </li>
         ))
       }
@@ -48,6 +56,7 @@ const styles = StyleSheet.create({
   link: {
     textDecoration: 'none',
     color: colors.ebonyClay,
+    cursor: 'pointer',
 
     ':hover': {
       textDecoration: 'underline'
