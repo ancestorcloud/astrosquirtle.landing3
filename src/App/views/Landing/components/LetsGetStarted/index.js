@@ -1,5 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
+
+import { addRefToLink } from 'redux.store'
 
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from 'settings.style'
@@ -9,10 +10,10 @@ import Btn from 'atm.Btn'
 
 import { links } from 'config.definitions'
 
-const LetsGetStarted = ({ refCode }) =>
+const LetsGetStarted = () =>
   <div className={css(styles.LetsGetStarted)}>
     <div className={css(styles.buttonWrapper)}>
-      <a href={`${links.registration}${refCode ? `?ref=${refCode}` : ''}`} onClick={ctaOnClick}>
+      <a href={addRefToLink(links.registration)} onClick={ctaOnClick}>
         <Btn
           copy={'Let\'s get started'}
           size='big'
@@ -21,11 +22,7 @@ const LetsGetStarted = ({ refCode }) =>
     </div>
   </div>
 
-const mapStateToProps = ({
-  session: { ref: refCode }
-}) => ({ refCode })
-
-export default connect(mapStateToProps)(LetsGetStarted)
+export default LetsGetStarted
 
 function ctaOnClick () {
   if (window.ga) {

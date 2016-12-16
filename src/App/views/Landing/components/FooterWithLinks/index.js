@@ -1,17 +1,15 @@
 import React from 'react'
+
+import { addRefToLink } from 'redux.store'
+
 import { StyleSheet, css } from 'aphrodite'
-import { connect } from 'react-redux'
 
 import Logo from 'atm.Logo'
 import LinkGroup from './components/LinkGroup'
 
 import { links } from 'config.definitions'
 
-const FooterWithLinks = ({ refCode }) => {
-  const refQueryParam = refCode
-    ? `?ref=${refCode}`
-    : ''
-
+const FooterWithLinks = () => {
   const linkGroups = [
     {
       title: 'Social',
@@ -48,20 +46,20 @@ const FooterWithLinks = ({ refCode }) => {
       links: [
         {
           copy: 'Apply to help',
-          href: `${links.registration}${refQueryParam}`
+          href: addRefToLink(links.registration)
         },
         {
           copy: 'Helpers',
-          href: `${links.community}${refQueryParam}`
+          href: addRefToLink(links.community)
         }, {
           copy: 'Requests',
-          href: `${links.helpOthers}${refQueryParam}`
+          href: addRefToLink(links.helpOthers)
         }, {
           copy: 'Register',
-          href: `${links.registration}${refQueryParam}`
+          href: addRefToLink(links.registration)
         }, {
           copy: 'Login',
-          href: `${links.login}${refQueryParam}`
+          href: addRefToLink(links.login)
         }
       ]
     }
@@ -88,11 +86,7 @@ const FooterWithLinks = ({ refCode }) => {
   )
 }
 
-const mapStateToProps = ({
-  session: { ref }
-}) => ({ refCode: ref })
-
-export default connect(mapStateToProps)(FooterWithLinks)
+export default FooterWithLinks
 
 const styles = StyleSheet.create({
   wrapper: {

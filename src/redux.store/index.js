@@ -25,7 +25,6 @@ const coreMiddleware = applyMiddleware(
  * https://github.com/zalmoxisus/redux-devtools-extension
  */
 export function configureStore (initialState) {
-
   if (__DEV__) { /* [1] */ // eslint-disable-line
     const { devToolsExtension } = window
     store = createStore(
@@ -46,3 +45,11 @@ export function configureStore (initialState) {
 
 export const getStore = () => store
 
+export const addRefToLink = (link) => {
+  const refCode = store &&
+    store.getState &&
+    store.getState() &&
+    store.getState().session &&
+    store.getState().session.ref
+  return `${link}${refCode ? `?ref=${refCode}` : ''}`
+}
