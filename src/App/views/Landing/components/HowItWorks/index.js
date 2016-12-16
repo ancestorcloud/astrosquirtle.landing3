@@ -3,7 +3,6 @@ import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
 
-import Header from 'atm.Header'
 import Step from './components/Step'
 
 const imagePath = '/assets/images/HowItWorks/'

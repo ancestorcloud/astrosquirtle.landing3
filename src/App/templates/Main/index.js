@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
 import Nav from './components/Nav'
+import Notifications from './components/Notifications'
 
 import { colors } from 'settings.style'
 
@@ -10,6 +11,7 @@ export default (Component) => React.createClass({
     return (
       <div className={css(styles.flex)}>
         <Nav />
+        <Notifications />
         <div className={css(styles.componentWrapper)}>
           <Component />
         </div>

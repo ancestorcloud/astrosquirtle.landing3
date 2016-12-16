@@ -1,11 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
 import { StyleSheet, css } from 'aphrodite'
 
 import Btn from 'atm.Btn'
 
 import { links } from 'config.definitions'
 
-const Hero = () => (
+const Hero = ({ refCode }) =>
   <div className={css(styles.Hero)}>
     <div className={css(styles.images)}>
       <div className={css(styles.image, styles.image0)} />
@@ -15,7 +17,7 @@ const Hero = () => (
       <div className={css(styles.textMinor)}>The easiest way to</div>
       <div className={css(styles.textMajor)}>discover your family</div>
       <div className={css(styles.buttonWrapper)}>
-        <a href={links.registration} onClick={ctaOnClick}>
+        <a href={`${links.registration}${refCode ? `?ref=${refCode}` : ''}`} onClick={ctaOnClick}>
           <Btn
             copy={'Let\'s get started'}
             size='big'
@@ -24,10 +26,14 @@ const Hero = () => (
       </div>
     </div>
   </div>
-)
+
+const mapStateToProps = ({
+  session: { ref: refCode }
+}) => ({ refCode })
+
+export default connect(mapStateToProps)(Hero)
 
 function ctaOnClick () {
-
   if (window.ga) {
     window.ga('send', 'event', {
       eventCategory: 'Landing',
@@ -42,7 +48,6 @@ function ctaOnClick () {
       {source: 'main'}
     )
   }
-
 }
 
 const stretchStyle = {
@@ -125,5 +130,3 @@ const styles = StyleSheet.create({
     backgroundImage: 'url(/assets/images/Hero/helper.png)'
   }
 })
-
-export default Hero

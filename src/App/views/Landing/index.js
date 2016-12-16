@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
 import Hero from './components/Hero'
-import HowItWorks from './components/HowItWorks'
 import FeaturedHelpers from './components/FeaturedHelpers'
 import Quote from './components/Quote'
 import AsSeenIn from './components/AsSeenIn'
@@ -15,7 +14,6 @@ import FooterWithLinks from './components/FooterWithLinks'
 const Landing = () => (
   <div className={css(styles.flex)}>
     <Hero />
-    <HowItWorks />
     <FeaturedHelpers />
     <Quote />
     <AsSeenIn />

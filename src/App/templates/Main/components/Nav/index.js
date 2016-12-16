@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
 import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
@@ -10,38 +11,9 @@ import { Link } from 'react-router'
 
 import { links } from 'config.definitions'
 
-const linksData = [
-  {
-    copy: 'FAQ',
-    link: '/faq'
-  },
-  {
-    copy: 'Blog',
-    href: links.blog
-  },
-  {
-    copy: 'Login',
-    href: links.login
-  },
-  {
-    copy: 'Apply to help',
-    href: links.registration
-  },
-  {
-    copy: 'Sign up',
-    href: links.registration,
-    isButton: true,
-    onClick: ctaOnClick
-  }
-]
-
 const linkContent = (isButton, content) =>
   isButton
-  ? (
-    <Btn
-      copy={content}
-    />
-  )
+  ? <Btn copy={content} />
   : content
 
 const mapLinkDataToLink = ({ copy, link, href, isButton, onClick }, i) =>
@@ -57,23 +29,60 @@ const mapLinkDataToLink = ({ copy, link, href, isButton, onClick }, i) =>
     </a>
   )
 
-const Nav = () => (
-  <div className={css(styles.Nav)}>
-    <Link to='/'>
-      <div className={css(styles['logo-big'])}>
-        <Logo />
-      </div>
-      <img src='/assets/images/ac_cloud.png' className={css(styles['logo-small'])} />
-    </Link>
-    <ul className={css(styles.links)}>
-      {
-        linksData.map(mapLinkDataToLink)
-      }
-    </ul>
-  </div>
-)
+const Nav = ({ refCode }) => {
+  const refQueryParam = refCode
+    ? `?ref=${refCode}`
+    : ''
 
-export default Nav
+  const linksData = [
+    {
+      copy: 'FAQ',
+      link: '/faq'
+    },
+    {
+      copy: 'Blog',
+      href: links.blog
+    },
+    {
+      copy: 'Login',
+      href: `${links.login}${refQueryParam}`
+    },
+    {
+      copy: 'Apply to help',
+      href: `${links.registration}${refQueryParam}`
+    },
+    {
+      copy: 'Sign up',
+      href: `${links.registration}${refQueryParam}`,
+      isButton: true,
+      onClick: ctaOnClick
+    }
+  ]
+
+  return (
+    <div className={css(styles.Nav)}>
+      <Link to='/'>
+        <div className={css(styles['logo-big'])}>
+          <Logo />
+        </div>
+        <img src='/assets/images/ac_cloud.png' className={css(styles['logo-small'])} />
+      </Link>
+      <ul className={css(styles.links)}>
+        {linksData.map(mapLinkDataToLink)}
+      </ul>
+    </div>
+  )
+}
+
+Nav.propTypes = {
+  refCode: PropTypes.string
+}
+
+const mapStateToProps = ({
+  session: { ref: refCode }
+}) => ({ refCode })
+
+export default connect(mapStateToProps)(Nav)
 
 function ctaOnClick () {
   if (window.ga) {
