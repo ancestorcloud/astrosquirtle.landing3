@@ -44,10 +44,6 @@ function ctaOnClick () {
       {source: 'main'}
     )
   }
-
-  if (window) {
-    window.location.href = addRefToLink(links.registration)
-  }
 }
 
 const stretchStyle = {
