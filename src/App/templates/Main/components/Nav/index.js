@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
+
+import { addRefToLink } from 'redux.store'
+
 import { StyleSheet, css } from 'aphrodite'
 
 import { colors } from 'settings.style'
@@ -24,7 +26,16 @@ const mapLinkDataToLink = ({ copy, link, href, isButton, onClick }, i) =>
     }</Link>
   )
   : (
-    <a key={i} className={css(styles.link)} href={href} onClick={onClick}>
+    <a {...{
+      key: i,
+      className: css(styles.link),
+      onClick: () => {
+        if (window) {
+          onClick && onClick()
+          window.location.href = addRefToLink(href)
+        }
+      }
+    }}>
       {linkContent(isButton, copy)}
     </a>
   )
@@ -78,11 +89,7 @@ Nav.propTypes = {
   refCode: PropTypes.string
 }
 
-const mapStateToProps = ({
-  session: { ref: refCode }
-}) => ({ refCode })
-
-export default connect(mapStateToProps)(Nav)
+export default Nav
 
 function ctaOnClick () {
   if (window.ga) {
@@ -137,6 +144,7 @@ const styles = StyleSheet.create({
     listStyleType: 'none',
     margin: 0,
     padding: 0,
+    cursor: 'pointer',
 
     display: 'flex',
     alignItems: 'center',

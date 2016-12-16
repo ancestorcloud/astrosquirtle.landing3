@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { addRefToLink } from 'redux.store'
 
 import { StyleSheet, css } from 'aphrodite'
 
@@ -17,7 +17,7 @@ const Hero = ({ refCode }) =>
       <div className={css(styles.textMinor)}>The easiest way to</div>
       <div className={css(styles.textMajor)}>discover your family</div>
       <div className={css(styles.buttonWrapper)}>
-        <a href={`${links.registration}${refCode ? `?ref=${refCode}` : ''}`} onClick={ctaOnClick}>
+        <a onClick={ctaOnClick}>
           <Btn
             copy={'Let\'s get started'}
             size='big'
@@ -27,11 +27,7 @@ const Hero = ({ refCode }) =>
     </div>
   </div>
 
-const mapStateToProps = ({
-  session: { ref: refCode }
-}) => ({ refCode })
-
-export default connect(mapStateToProps)(Hero)
+export default Hero
 
 function ctaOnClick () {
   if (window.ga) {
@@ -47,6 +43,10 @@ function ctaOnClick () {
       'Landed',
       {source: 'main'}
     )
+  }
+
+  if (window) {
+    window.location.href = addRefToLink(links.registration)
   }
 }
 
