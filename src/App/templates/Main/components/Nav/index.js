@@ -74,6 +74,10 @@ const Nav = ({ refCode }) => {
   )
 }
 
+Nav.propTypes = {
+  refCode: PropTypes.string
+}
+
 const mapStateToProps = ({
   session: { ref: refCode }
 }) => ({ refCode })

@@ -6,7 +6,8 @@ import { updateSession } from 'App/state/session/actions'
 
 const referrerToRefCode = {
   'http://trace.com.s3-website-us-west-2.amazonaws.com/page1.html': 'billiongraves',
-  'http://trace.com.s3-website-us-west-2.amazonaws.com/page2.html': 'billiongravesPlus'
+  'http://trace.com.s3-website-us-west-2.amazonaws.com/page2.html': 'billiongravesPlus',
+  'https://billiongraves.com/bgplus-discounts/': 'billiongravesPlus'
 }
 
 const App = React.createClass({
