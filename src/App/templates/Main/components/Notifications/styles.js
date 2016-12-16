@@ -78,5 +78,5 @@ const styles = StyleSheet.create({
     flexGrow: 1
   }
 })
-console.log('STYLES: ', styles)
+
 export default styles
