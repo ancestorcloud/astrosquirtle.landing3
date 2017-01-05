@@ -37,7 +37,13 @@ export default [
       },
       {
         title: 'How are payments processed?',
-        content: <p>We currently use PayPal for secure transactions as we finish building our internal payment processing system. Don’t have Paypal? No problem, we’re happy to discuss other alternatives.</p>
+        content: (
+          <div>
+            <p>{`If you are paying for help, you will pay with a credit card through our internal processing system when you accept a proposal. If you prefer, you can also give our team a call and we can take your payment over the phone.`}</p>
+            <p>{`If you're being paid for helping someone else, you will be paid through PayPal when the research results you submit are approved.`}</p>
+            <p>{`Let us know if these payment options don't work for you and we can discuss alternatives.`}</p>
+          </div>
+        )
       },
       {
         title: 'What if nobody helps with my requests?',
