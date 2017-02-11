@@ -43,7 +43,7 @@ const initialState = [
     type: TYPE.s,
     text:
       <div>
-        {`Discover our new Origins Package we debuted at Rootstech. Check it out `}
+        {`Discover our new Origins Package we debuted at RootsTech. Check it out `}
         <a {...{
           href: 'https://trace.com',
           style: {
