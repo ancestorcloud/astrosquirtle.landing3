@@ -38,11 +38,29 @@ const reducerMap = {
       : state
 }
 
+const initialState = [
+  createNotification({
+    type: TYPE.s,
+    text:
+      <div>
+        {`Discover our new Origins Package we debuted at Rootstech. Check it out `}
+        <a {...{
+          href: 'https://trace.com',
+          style: {
+            color: 'inherit',
+            textDecoration: 'underline'
+          }
+        }}>{`here!`}</a>
+      </div>,
+    time: 99999999
+  })
+]
+
 /**
  * 1. The gerund map uses the default name for actions, e.g. ACTION.
  *    This allows us to match ACTION_FAILURE to the proper gerund.
  */
-export const notifications = (state = [], action) => {
+export const notifications = (state = initialState, action) => {
   const { type, error } = action
 
   const errorGerund = errorGerunds[type] || errorGerunds[type.replace('_FAILURE', '')]
