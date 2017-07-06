@@ -1,0 +1,155 @@
+import React from 'react'
+import Media from 'react-media'
+
+import glamorous, {Div, Img, A} from 'glamorous'
+
+import Button from '../../../../shared/Button'
+
+const adjacentBoxesStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+}
+
+const Space = () =>
+  <Div height='40px' />
+
+const Copy = glamorous.div({
+  textAlign: 'center',
+  fontSize: '1.2em',
+})
+
+const Left = ({width100}) =>
+  <Div {...{
+    ...adjacentBoxesStyles,
+    width: width100 ? '100%' : '50%',
+  }}>
+    <Img {...{
+      src: '/assets/ac logo.png',
+      height: '80px',
+    }} />
+    <Space />
+    <Copy>{`AncestorCloud has acquired Genealogists.com!`}</Copy>
+    <Space />
+    <Div {...{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-end',
+    }}>
+      {[
+        {
+          copy: 'Read the official press release',
+          href: '',
+        },
+        {
+          copy: 'Learn more about our rebrand',
+          href: 'https://blog.ancestorcloud.com',
+        },
+        {
+          copy: 'Log in to AncestorCloud',
+          href: 'https://app.ancestorcloud.com/#/login',
+        },
+      ].map(({copy, href}) =>
+        <Div {...{
+          marginBottom: '10px',
+        }}>
+          <A {...{
+            href,
+
+            fontFamily: 'Bebas Neue',
+            fontSize: '0.9em',
+            letterSpacing: '0.1em',
+            color: 'white',
+            textDecoration: 'none',
+            ':hover': {
+              textDecoration: 'underline',
+            },
+
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+            <Div {...{
+              paddingTop: '4px',
+            }}>{copy}</Div>
+            <Img {...{
+              src: '/assets/new svg.svg',
+
+              width: '22px',
+              marginLeft: '10px',
+            }} />
+          </A>
+        </Div>
+      )}
+    </Div>
+  </Div>
+
+const Right = ({width100}) =>
+  <Div {...{
+    ...adjacentBoxesStyles,
+    width: width100 ? '100%' : '50%',
+  }}>
+    <Img {...{
+      src: '/assets/Logo B&W eps.png',
+      height: '80px',
+    }} />
+    <Space />
+    <Copy>{`Continue receiving high quality research help at Genealogists.com`}</Copy>
+    <Space />
+    <a href='https://genealogists.com' target='_blank'>
+      <Button {...{
+        copy: `Get research help`,
+      }} />
+    </a>
+  </Div>
+
+const TopPart = () =>
+  <Div {...{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }}>
+    <Div {...{
+      fontFamily: 'Playfair Display',
+      fontWeight: 'bold',
+      letterSpacing: '0.1em',
+      fontSize: '1.3em',
+    }}>{`Our Big Announcement 🎉`}</Div>
+    <Space />
+    <Media query="(min-width: 700px)">
+      {media => media
+        ? (
+          <Div {...{
+            display: 'flex',
+            justifyContent: 'center',
+          }}>
+            <Left />
+            <Div width='40px' />
+            <Div {...{
+              height: '100%',
+              borderLeft: '1px solid white',
+            }} />
+            <Div width='40px' />
+            <Right />
+          </Div>
+        )
+        : (
+          <Div {...{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}>
+            <Left width100 />
+            <Div height='40px' />
+            <Div {...{
+              width: '100%',
+              borderBottom: '1px solid white',
+            }} />
+            <Div height='40px' />
+            <Right width100 />
+          </Div>
+        )
+      }
+    </Media>
+  </Div>
+
+export default TopPart
