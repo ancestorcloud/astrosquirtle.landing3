@@ -10,9 +10,9 @@ const Footer = () =>
   }}>
     <Div {...{
       fontStyle: 'italic',
-      fontSize: '0.8em',
+      fontSize: '0.7em',
       color: '#999',
-    }}>{`Copyright 2017`}</Div>
+    }}>{`2017 Ancestor Cloud Inc. All Rights Reserved`}</Div>
     <Div {...{
       width: '100%',
       maxWidth: '370px',
@@ -46,9 +46,9 @@ const Footer = () =>
           target: newTab && '_blank',
 
           marginLeft: '10px',
-          fontFamily: 'Bebas Neue',
+          fontWeight: '700',
           letterSpacing: '0.1em',
-          color: 'inherit',
+          color: '#2AC0CB',
           textDecoration: 'none',
           whiteSpace: 'nowrap',
           ':hover': {

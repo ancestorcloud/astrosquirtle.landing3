@@ -19,14 +19,12 @@ export default Btn
 const styles = StyleSheet.create({
   button: {
     border: 'none',
-    borderRadius: '4px',
-    backgroundColor: colors.radicalRed,
-    padding: '13px 20px 10px',
-    fontWeight: '400',
-    fontFamily: 'Bebas Neue',
+    borderRadius: '100px',
+    backgroundColor: '#3EA6FC',
+    padding: '10px 20px 10px',
+    fontWeight: '700',
     fontSize: '13px',
-    textTransform: 'uppercase',
-    letterSpacing: '2px',
+    letterSpacing: '0.1em',
     color: 'white',
     cursor: 'pointer',
     outline: 'none'

@@ -51,9 +51,10 @@ const Letter = () =>
   <div>
     <P {...{
       style: {
-        fontFamily: 'Bebas Neue',
+        fontWeight: '900',
         fontSize: '1.2em',
         letterSpacing: '0.1em',
+        color: '#3D5971',
       }
     }}>{`AncestorCloud acquires Genealogists.com`}</P>
     <P>

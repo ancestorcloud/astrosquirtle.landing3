@@ -43,7 +43,7 @@ const Left = ({width100}) =>
         },
         {
           copy: 'Learn more about our rebrand',
-          href: 'http://blog.ancestorcloud.com',
+          href: 'http://blog.ancestorcloud.com/2017/07/07/rebranding-to-trace/',
         },
         {
           copy: 'Log in to AncestorCloud',
@@ -63,8 +63,9 @@ const Left = ({width100}) =>
             backgroundRepeat: 'no-repeat',
             backgroundSize: '22px 22px',
             backgroundPosition: 'right center',
-            fontFamily: 'Bebas Neue',
+            // fontFamily: 'Bebas Neue',
             fontSize: '0.9em',
+            fontWeight: '500',
             letterSpacing: '0.1em',
             color: 'white',
             textDecoration: 'none',
@@ -100,7 +101,7 @@ const Right = ({width100}) =>
     <Space />
     <a href='https://genealogists.com' target='_blank'>
       <Button {...{
-        copy: `Get research help`,
+        copy: `Get Research Help`,
       }} />
     </a>
   </Div>
@@ -112,11 +113,11 @@ const TopPart = () =>
     alignItems: 'center',
   }}>
     <Div {...{
-      fontFamily: 'Playfair Display',
-      fontWeight: 'bold',
-      letterSpacing: '0.1em',
+      // fontFamily: 'Playfair Display',
+      fontWeight: '900',
+      letterSpacing: '0.15em',
       fontSize: '1.4em',
-    }}>{`Our Big Announcement 🎉`}</Div>
+    }}>{`Big Announcement 🎉`}</Div>
     <Space />
     <Media query="(min-width: 700px)">
       {media => media

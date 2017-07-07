@@ -9,7 +9,7 @@ import Footer from './components/03-Footer'
 export default () =>
   <div>
     <Div {...{
-      background: '#242A39',
+      background: '#53718C',
       padding: '64px 0',
       color: 'white',
 
@@ -34,7 +34,7 @@ export default () =>
         // fontFamily: `medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif`,
         lineHeight: '1.58em',
         fontSize: '18px',
-        fontWeight: '400',
+        fontWeight: '100',
         fontStyle: 'normal',
         '-moz-font-feature-settings': `"liga" on`,
         color: 'rgba(0,0,0,0.8)',
