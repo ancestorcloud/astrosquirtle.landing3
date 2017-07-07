@@ -27,7 +27,7 @@ const Left = ({width100}) =>
     width: width100 ? '100%' : '50%',
   }}>
     <Img {...{
-      src: '/assets/ac logo.png',
+      src: '/assets/ac.com-svg.svg',
       height: '80px',
     }} />
     <Space />
@@ -95,7 +95,7 @@ const Right = ({width100}) =>
     width: width100 ? '100%' : '50%',
   }}>
     <Img {...{
-      src: '/assets/Logo B&W eps.png',
+      src: '/assets/g.com-svg.svg',
       height: '80px',
     }} />
     <Space />
