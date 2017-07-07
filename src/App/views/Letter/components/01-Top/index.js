@@ -41,7 +41,7 @@ const Left = ({width100}) =>
       {[
         {
           copy: 'Read the official press release',
-          href: '/July_2017_press_release.pdf',
+          href: '/AncestorCloud-Rebrands-Acquires-Genealogists.com-July-2017.pdf',
         },
         {
           copy: 'Learn more about our rebrand',
