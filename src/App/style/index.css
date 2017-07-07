@@ -49,12 +49,5 @@ html,
 body,
 #app {
   height: 100%;
-  /*font-family: 'Source Sans Pro', sans-serif;*/
   font-family: 'Museo Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  /*font-family: 'Playfair Display';*/
-  text-transform: uppercase;
-  letter-spacing: 3px;
 }
