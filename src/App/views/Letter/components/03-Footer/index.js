@@ -15,7 +15,7 @@ const Footer = () =>
     }}>{`Copyright 2017`}</Div>
     <Div {...{
       width: '100%',
-      maxWidth: '450px',
+      maxWidth: '370px',
 
       display: 'flex',
       justifyContent: 'space-between',
@@ -30,11 +30,6 @@ const Footer = () =>
         {
           href: 'http://blog.ancestorcloud.com',
           copy: 'Blog',
-          newTab: true,
-        },
-        {
-          href: '/',
-          copy: 'FAQ',
           newTab: true,
         },
         {

@@ -16,7 +16,7 @@ const Space = () =>
 
 const Copy = glamorous.div({
   textAlign: 'center',
-  fontSize: '1.2em',
+  fontSize: '1.3em',
 })
 
 const Left = ({width100}) =>
@@ -39,11 +39,11 @@ const Left = ({width100}) =>
       {[
         {
           copy: 'Read the official press release',
-          href: '',
+          href: '/July 2017 Press Release.pdf',
         },
         {
           copy: 'Learn more about our rebrand',
-          href: 'https://blog.ancestorcloud.com',
+          href: 'http://blog.ancestorcloud.com',
         },
         {
           copy: 'Log in to AncestorCloud',
@@ -55,14 +55,23 @@ const Left = ({width100}) =>
         }}>
           <A {...{
             href,
+            target: '_blank',
 
+            height: '22px',
+            paddingRight: '30px',
+            backgroundImage: `url('/assets/go-white.svg')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '22px 22px',
+            backgroundPosition: 'right center',
             fontFamily: 'Bebas Neue',
             fontSize: '0.9em',
             letterSpacing: '0.1em',
             color: 'white',
             textDecoration: 'none',
             ':hover': {
-              textDecoration: 'underline',
+              // textDecoration: 'underline',
+              backgroundImage: `url('/assets/go-gold.svg')`,
+              color: '#FFCF40',
             },
 
             display: 'flex',
@@ -71,12 +80,6 @@ const Left = ({width100}) =>
             <Div {...{
               paddingTop: '4px',
             }}>{copy}</Div>
-            <Img {...{
-              src: '/assets/new svg.svg',
-
-              width: '22px',
-              marginLeft: '10px',
-            }} />
           </A>
         </Div>
       )}
@@ -112,7 +115,7 @@ const TopPart = () =>
       fontFamily: 'Playfair Display',
       fontWeight: 'bold',
       letterSpacing: '0.1em',
-      fontSize: '1.3em',
+      fontSize: '1.4em',
     }}>{`Our Big Announcement 🎉`}</Div>
     <Space />
     <Media query="(min-width: 700px)">
@@ -125,7 +128,7 @@ const TopPart = () =>
             <Left />
             <Div width='40px' />
             <Div {...{
-              height: '100%',
+              height: '300px',
               borderLeft: '1px solid white',
             }} />
             <Div width='40px' />

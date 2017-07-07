@@ -70,7 +70,7 @@ const Letter = () =>
       {`, but we're sad to announce that we'll be closing AncestorCloud.com.`}
     </P>
     <P>{`Since starting AncestorCloud in 2015, we've fulfilled countless requests with the help of over 13,000 users. We've built relationships that span the globe, we've helped people connect with loved ones, and we've made lifelong friendships in the process.`}</P>
-    <P>{`AncestorCloud.com will no longer be taking requests or new registrations as of July 1st. We'll do our best to complete the existing requests. Existing users will be able to access their information until August 1st.`}</P>
+    <P>{`AncestorCloud.com will no longer be taking requests or new registrations as of July 10th. We'll do our best to complete the existing requests. Existing users will be able to access their information until August 1st.`}</P>
     <P>
       {`If you're a researcher, you can fill out `}
       <A {...{
