@@ -99,11 +99,17 @@ const Right = ({width100}) =>
       height: '80px',
     }} />
     <Space />
-    <Copy>{`Continue receiving high quality research help at Genealogists.com`}</Copy>
+    <Copy>{`Continue giving or receiving research help at Genealogists.com`}</Copy>
     <Space />
     <a href='https://genealogists.com' target='_blank'>
       <Button {...{
-        copy: `Get Research Help`,
+        copy: <Div width='150px'>{`Get Research Help`}</Div>,
+      }} />
+    </a>
+    <Div height='16px' />
+    <a href='https://ancestorcloud.typeform.com/to/HAJQPD' target='_blank'>
+      <Button {...{
+        copy: <Div width='150px'>{`Become a Researcher`}</Div>,
       }} />
     </a>
   </Div>
