@@ -1,23 +1,10 @@
 import React, { PropTypes } from 'react'
-import { StyleSheet, css } from 'aphrodite'
 
+import {Button} from 'glamorous'
 import { colors } from 'settings.style'
 
 const Btn = ({ copy, size = 'normal' }) => (
-  <button
-    className={css(styles.button, styles[`button-${size}`])}
-  >{copy}</button>
-)
-
-Btn.propTypes = {
-  copy: PropTypes.string,
-  size: PropTypes.oneOf(['normal', 'big'])
-}
-
-export default Btn
-
-const styles = StyleSheet.create({
-  button: {
+  <Button {...{
     border: 'none',
     borderRadius: '100px',
     backgroundColor: '#3EA6FC',
@@ -27,11 +14,12 @@ const styles = StyleSheet.create({
     letterSpacing: '0.1em',
     color: 'white',
     cursor: 'pointer',
-    outline: 'none'
-  },
+    outline: 'none',
+  }}>{copy}</Button>
+)
 
-  'button-big': {
-    width: '100%',
-    padding: '20px 30px'
-  }
-})
+Btn.propTypes = {
+  copy: PropTypes.string,
+}
+
+export default Btn
