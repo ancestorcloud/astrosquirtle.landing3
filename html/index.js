@@ -1,7 +1,7 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StyleSheetServer } from 'aphrodite'
-import Main from '../src/App/views/Landing'
+import Main from '../src/App/views/Letter'
 
 /**
  * 1. must be a direct url
