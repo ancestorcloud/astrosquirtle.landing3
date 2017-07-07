@@ -16,6 +16,8 @@ const Space = () =>
 
 const Copy = glamorous.div({
   textAlign: 'center',
+  fontWeight: '100',
+  letterSpacing: '0.04em',
   fontSize: '1.3em',
 })
 
@@ -39,7 +41,7 @@ const Left = ({width100}) =>
       {[
         {
           copy: 'Read the official press release',
-          href: '/July 2017 Press Release.pdf',
+          href: '/July_2017_press_release.pdf',
         },
         {
           copy: 'Learn more about our rebrand',
@@ -72,7 +74,7 @@ const Left = ({width100}) =>
             ':hover': {
               // textDecoration: 'underline',
               backgroundImage: `url('/assets/go-gold.svg')`,
-              color: '#FFCF40',
+              color: '#18C0CC',
             },
 
             display: 'flex',
